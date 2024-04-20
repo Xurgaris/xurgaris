@@ -1,0 +1,118 @@
+  /* IMAGENS */
+  #logo {
+    height: 80px;
+}
+
+#instagram {
+    height: 35px;
+    width: 34px;
+}
+
+/* ------ X ------ */
+
+/* BOTÕES */
+#bot {
+    background: none;
+    background-color: #212121;
+    color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* ------ X ------ */
+/* Hovers */
+#bot:hover {
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+a:hover{
+    filter: brightness(70%);
+    color: #ebe9e9;
+}
+
+#instagram:hover {
+    cursor: pointer;
+    filter: contrast(5%);
+}
+#btTermos{
+    color: #ebe9e9;
+    cursor: pointer;
+}
+
+/* --------------  */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+.main-cabecalho {
+    border: solid 0px #000;
+    background-color: #fff;
+    display: flex;
+    position: fixed;
+    gap: 60px;
+    width: 70%;
+    padding: 5px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.son-one {
+    display: flex;
+    gap: 10px;
+}
+
+.son-three {
+    display: flex;
+    gap: 10px;
+}
+
+.span {
+  height: 10px;
+  margin-top: 100px;
+  background-color: #ebe9e9;
+}
+
+.main-empresa{
+    display: flex;
+    flex-direction: column;
+   
+    text-align: justify;
+}
+
+#btTermos{
+    color: #d00909;
+}
+
+.main-G {
+    background-color: #ebe9e9;
+    color: #000000;
+    margin-top: 50px;
+    display: flex;
+    height: 220px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contato{
+    font-size: 20px;
+}
