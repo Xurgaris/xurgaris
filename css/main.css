@@ -274,18 +274,26 @@
         height: 150px;
         width: 100%;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
-    .bodysonG-I {
+    .bodysonG-I{
+        width: 70px;
+    }
+
+    .bodysonG-II {
         display: flex;
         flex-direction: column;
-        margin-left: 30px;
         gap: 2px;
         align-items: center;
-        margin-top: px;
-
+        margin-left: 10px;
     }
+
+    #ul{
+        font-size: 10px;
+        margin-left: -30px;
+    }
+
 
     #botao-whats {
         background: none;
@@ -318,10 +326,9 @@
 
     .redes {
         font-size: 10px;
-        margin-left: 40px;
+       
         display: flex;
         flex-direction: column;
-        margin-right: 100px;
         margin-top: -20px;
     }
 
