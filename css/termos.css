@@ -1,3 +1,232 @@
+@media only screen and (max-width: 766px){
+    /* IMAGENS */
+    #logo {
+       height: 50px;
+   }
+   
+   #instagram {
+       height: 35px;
+       width: 34px;
+   }
+   
+   /* ------ X ------ */
+   
+   /* BOTÕES */
+   #bot {
+       background: none;
+       display: none;
+       background-color: #212121;
+       color: #fff;
+       padding-left: 30px;
+       padding-right: 30px;
+       padding-top: 5px;
+       padding-bottom: 5px;
+       font-size: 15px;
+       border-radius: 20px;
+   }
+   
+   a {
+       color: #000000;
+       text-decoration: none;
+   }
+   
+   /* ------ X ------ */
+   /* Hovers */
+   #bot:hover {
+       filter: brightness(70%);
+       cursor: pointer;
+   }
+   
+   a:hover {
+       filter: brightness(70%);
+       color: #ebe9e9;
+   }
+   
+   #instagram:hover {
+       cursor: pointer;
+       filter: contrast(5%);
+   }
+   
+   /* --------------  */
+   body {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   
+   header {
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+.main-cabecalho {
+    border: solid 0px #000;
+    background-color: #fff;
+    display: flex;
+    position: fixed;
+    gap: 60px;
+    width: 50%;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+   
+   .son-one {
+       display: flex;
+       gap: 10px;
+   }
+   
+   .son-three {
+       display: flex;
+       gap: 10px;
+   }
+   
+   .span {
+     height: 10px;
+     margin-top: 100px;
+     background-color: #ebe9e9;
+   }
+   
+   /* ID */
+   #main-titulo{
+     text-align: center;
+     font-size: 20px;
+   }
+   #son-descricao{
+     font-size: 18px; 
+     text-align: justify;
+   }
+   #son-termos{
+     color: rgb(41, 32, 229);
+     font-size: 17px;
+   }
+   #termos-son{
+     color: rgb(41, 122, 215);
+     font-size: 17px;
+   }
+   #datadia{
+     font-size: 15px; 
+     display:flex; 
+     justify-content: center;
+   }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px){
+ /* IMAGENS */
+ #logo {
+    height: 80px;
+}
+
+#instagram {
+    height: 35px;
+    width: 34px;
+}
+
+/* ------ X ------ */
+
+/* BOTÕES */
+#bot {
+    background: none;
+    background-color: #212121;
+    color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* ------ X ------ */
+/* Hovers */
+#bot:hover {
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+a:hover {
+    filter: brightness(70%);
+    color: #ebe9e9;
+}
+
+#instagram:hover {
+    cursor: pointer;
+    filter: contrast(5%);
+}
+
+/* --------------  */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+.main-cabecalho {
+    border: solid 0px #000;
+    background-color: #ffffff;
+    display: flex;
+    position: fixed;
+    gap: 60px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.son-one {
+    display: flex;
+    gap: 10px;
+}
+
+.son-three {
+    display: flex;
+    gap: 10px;
+}
+
+.span {
+  height: 10px;
+  margin-top: 100px;
+  background-color: #ebe9e9;
+}
+
+/* ID */
+#main-titulo{
+  text-align: center;
+  font-size: 20px;
+}
+#son-descricao{
+  font-size: 18px; 
+  text-align: justify;
+}
+#son-termos{
+  color: rgb(41, 32, 229);
+  font-size: 17px;
+}
+#termos-son{
+  color: rgb(41, 122, 215);
+  font-size: 17px;
+}
+#datadia{
+  font-size: 15px; 
+  display:flex; 
+  justify-content: center;
+}
+}
+
+@media only screen and (min-width: 1024px) {
   /* IMAGENS */
   #logo {
       height: 80px;
@@ -60,7 +289,7 @@
 
   .main-cabecalho {
       border: solid 0px #000;
-      background-color: #fff;
+      background-color: #ffffff;
       display: flex;
       position: fixed;
       gap: 60px;
@@ -108,4 +337,5 @@
     font-size: 15px; 
     display:flex; 
     justify-content: center;
+}
 }
