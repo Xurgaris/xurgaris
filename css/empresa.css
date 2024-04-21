@@ -41,7 +41,7 @@
 
     /* ------ X ------ */
     /* Hovers */
-    #bot:hover {
+    #bot:hover,#bot-saibamais:hover{
         filter: brightness(70%);
         cursor: pointer;
     }
