@@ -284,7 +284,7 @@
     .bodysonG-II {
         display: flex;
         flex-direction: column;
-        gap: 2px;
+        gap: 1px;
         align-items: center;
         margin-left: 10px;
     }
@@ -318,6 +318,9 @@
         margin-bottom: 15px;
     }
 
+    #gmail{
+        margin-top: 10px;
+    }
     #gmail,
     #numero {
         font-size: 10px;
