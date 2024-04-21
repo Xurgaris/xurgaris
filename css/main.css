@@ -6,7 +6,7 @@
     }
 
     #banner {
-        height: 230px;
+        height: 250px;
     }
 
     #banner2 {
@@ -102,9 +102,6 @@
         display: flex;
         gap: 10px;
     }
-
-
-
     .son-three {
         display: flex;
         gap: 10px;
@@ -153,7 +150,7 @@
     }
 
     #main-frase {
-        font-size: 10px;
+        font-size: 17px;
     }
 
     .main-B {
