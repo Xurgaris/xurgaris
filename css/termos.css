@@ -13,17 +13,17 @@
    
    /* BOTÕES */
    #bot {
-       background: none;
-       display: none;
-       background-color: #212121;
-       color: #fff;
-       padding-left: 30px;
-       padding-right: 30px;
-       padding-top: 5px;
-       padding-bottom: 5px;
-       font-size: 15px;
-       border-radius: 20px;
-   }
+    background: none;
+    
+    background-color: #212121;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 10px;
+    border-radius: 20px;
+}
    
    a {
        color: #000000;
@@ -65,12 +65,12 @@
     background-color: #fff;
     display: flex;
     position: fixed;
-    gap: 60px;
-    width: 50%;
+    width: 100%;
     border-radius: 20px;
     align-items: center;
     justify-content: space-around;
 }
+
    
    .son-one {
        display: flex;
