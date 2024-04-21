@@ -2,7 +2,7 @@
 
     /* IMAGENS */
     #logo {
-        height: 40px;
+        height: 80px;
     }
 
     #banner {
@@ -355,7 +355,7 @@
     /* ------ X ------ */
 
     /* BOTÕES */
-    #bot {
+    #bot, #botao-whats, #bot-saibamais{
         background: none;
         background-color: #212121;
         color: #fff;
@@ -588,15 +588,25 @@
     }
 
     #frase-link {
-        font-size: 9px;
+        font-size: 10px;
         text-align: center;
         margin-bottom: 15px;
     }
 
     #gmail,
-    #numero,
-    .redes {
-        font-size: 10px;
+    #numero{
+        font-size: 15px;
+    }
+    #gmail{
+        margin-top: 10px;
+    }
+
+
+    .redes{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
     }
 
 
@@ -629,7 +639,7 @@
     /* ------ X ------ */
 
     /* BOTÕES */
-    #bot {
+    #bot, #bot-saibamais,#botao-whats{
         background: none;
         background-color: #212121;
         color: #fff;
@@ -640,6 +650,7 @@
         font-size: 15px;
         border-radius: 20px;
     }
+ 
 
     a {
         color: #000000;
@@ -864,11 +875,18 @@
     }
 
     #gmail,
-    #numero,
-    .redes {
+    #numero{
         font-size: 15px;
+    }
+    #gmail{
+        margin-top: 10px;
     }
 
 
-
+    .redes{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
 }
