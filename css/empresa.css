@@ -183,10 +183,8 @@
 
     .redes {
         font-size: 10px;
-       
         display: flex;
         flex-direction: column;
-        margin-top: -20px;
     }
 
     .logos{
