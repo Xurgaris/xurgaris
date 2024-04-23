@@ -68,6 +68,8 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border:0;
+        margin: 0;
     }
 
     header {
@@ -257,6 +259,8 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border:0;
+        margin: 0;
     }
 
     header {
@@ -424,6 +428,8 @@
         /* --------------  */
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border:0;
+            margin: 0;
         }
     
         header {
@@ -511,5 +517,10 @@
             display: flex;
             flex-direction: column;
             margin-right: 30px;
+        }
+        
+        .logos{
+            display: flex;
+            flex-direction: row;
         }
 }

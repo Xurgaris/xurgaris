@@ -9,6 +9,14 @@
         height: 35px;
         width: 34px;
     }
+    #linked{
+        height: 35px;
+        width: 34px;
+    }
+    #x{
+        height: 35px;
+        width: 34px;
+    }
 
     /* ------ X ------ */
 
@@ -63,6 +71,8 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 0;
+        margin: 0;
     }
 
     header {
@@ -197,6 +207,11 @@
         flex-direction: column;
         margin-top: -20px;
     }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
@@ -210,6 +225,16 @@
         height: 35px;
         width: 34px;
     }
+
+    #linked{
+        height: 35px;
+        width: 34px;
+    }
+    #x{
+        height: 35px;
+        width: 34px;
+    }
+
 
     /* ------ X ------ */
 
@@ -263,6 +288,8 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        border: 0;
     }
 
     header {
@@ -391,6 +418,14 @@
         height: 35px;
         width: 34px;
     }
+    #linked{
+        height: 35px;
+        width: 34px;
+    }
+    #x{
+        height: 35px;
+        width: 34px;
+    }
 
     /* ------ X ------ */
 
@@ -444,6 +479,8 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        border: 0;
     }
 
     header {
