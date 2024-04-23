@@ -1,341 +1,561 @@
-@media only screen and (max-width: 766px){
+@media only screen and (max-width: 766px) {
+
     /* IMAGENS */
     #logo {
-       height: 50px;
-   }
-   
-   #instagram {
-       height: 35px;
-       width: 34px;
-   }
-   
-   /* ------ X ------ */
-   
-   /* BOTÕES */
-   #bot {
-    background: none;
-    
-    background-color: #212121;
-    color: #fff;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 10px;
-    border-radius: 20px;
-}
-   
-   a {
-       color: #000000;
-       text-decoration: none;
-   }
-   
-   /* ------ X ------ */
-   /* Hovers */
-   #bot:hover {
-       filter: brightness(70%);
-       cursor: pointer;
-   }
-   
-   a:hover {
-       filter: brightness(70%);
-       color: #ebe9e9;
-   }
-   
-   #instagram:hover {
-       cursor: pointer;
-       filter: contrast(5%);
-   }
-   
-   /* --------------  */
-   body {
-       font-family: Verdana, Geneva, Tahoma, sans-serif;
-   }
-   
-   header {
-    display: flex;
-    width: 100%;
-    border-radius: 20px;
-    margin: auto;
-    justify-content: center;
+        height: 50px;
+    }
+
+    #instagram {
+        height: 35px;
+        width: 34px;
+    }
+
+    /* ------ X ------ */
+
+    /* BOTÕES */
+    #bot {
+        background: none;
+
+        background-color: #212121;
+        color: #fff;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 10px;
+        border-radius: 20px;
+    }
+
+    #botao-whats {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    /* ------ X ------ */
+    /* Hovers */
+    #bot:hover {
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
+    a:hover {
+        filter: brightness(70%);
+        color: #ebe9e9;
+    }
+
+    #instagram:hover {
+        cursor: pointer;
+        filter: contrast(5%);
+    }
+
+    /* --------------  */
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    header {
+        display: flex;
+        width: 100%;
+        border-radius: 20px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .main-cabecalho {
+        border: solid 0px #000;
+        background-color: #fff;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    .son-one {
+        display: flex;
+        gap: 10px;
+    }
+
+    .son-three {
+        display: flex;
+        gap: 10px;
+    }
+
+    .span {
+        height: 10px;
+        margin-top: 100px;
+        background-color: #ebe9e9;
+    }
+
+    /* ID */
+    #main-titulo {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #son-descricao {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    #son-termos {
+        color: rgb(41, 32, 229);
+        font-size: 17px;
+    }
+
+    #termos-son {
+        color: rgb(41, 122, 215);
+        font-size: 17px;
+    }
+
+    #datadia {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-G {
+        background-color: #ebe9e9;
+        color: #000000;
+        margin-top: 50px;
+        display: flex;
+        height: 150px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .bodysonG-I {
+        width: 70px;
+    }
+
+    .bodysonG-II {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    #ul {
+        font-size: 10px;
+        margin-left: -30px;
+    }
+
+
+    #botao-whats {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    #contato {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    #frase-link {
+        font-size: 9px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #gmail {
+        margin-top: 10px;
+    }
+
+    #gmail,
+    #numero {
+        font-size: 10px;
+    }
+
+
+    .redes {
+        font-size: 10px;
+
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+    }
 }
 
-.main-cabecalho {
-    border: solid 0px #000;
-    background-color: #fff;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: space-around;
-}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
 
-   
-   .son-one {
-       display: flex;
-       gap: 10px;
-   }
-   
-   .son-three {
-       display: flex;
-       gap: 10px;
-   }
-   
-   .span {
-     height: 10px;
-     margin-top: 100px;
-     background-color: #ebe9e9;
-   }
-   
-   /* ID */
-   #main-titulo{
-     text-align: center;
-     font-size: 20px;
-   }
-   #son-descricao{
-     font-size: 18px; 
-     text-align: justify;
-   }
-   #son-termos{
-     color: rgb(41, 32, 229);
-     font-size: 17px;
-   }
-   #termos-son{
-     color: rgb(41, 122, 215);
-     font-size: 17px;
-   }
-   #datadia{
-     font-size: 15px; 
-     display:flex; 
-     justify-content: center;
-   }
-}
-@media only screen and (min-width: 767px) and (max-width: 1023px){
- /* IMAGENS */
- #logo {
-    height: 80px;
-}
+    /* IMAGENS */
+    #logo {
+        height: 80px;
+    }
 
-#instagram {
-    height: 35px;
-    width: 34px;
-}
+    #instagram {
+        height: 35px;
+        width: 34px;
+    }
 
-/* ------ X ------ */
+    /* ------ X ------ */
 
-/* BOTÕES */
-#bot {
-    background: none;
-    background-color: #212121;
-    color: #fff;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 15px;
-    border-radius: 20px;
-}
+    /* BOTÕES */
+    #botao-whats {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
 
-a {
-    color: #000000;
-    text-decoration: none;
-}
+    #bot {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 15px;
+        border-radius: 20px;
+    }
 
-/* ------ X ------ */
-/* Hovers */
-#bot:hover {
-    filter: brightness(70%);
-    cursor: pointer;
-}
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
 
-a:hover {
-    filter: brightness(70%);
-    color: #ebe9e9;
-}
+    /* ------ X ------ */
+    /* Hovers */
+    #bot:hover {
+        filter: brightness(70%);
+        cursor: pointer;
+    }
 
-#instagram:hover {
-    cursor: pointer;
-    filter: contrast(5%);
-}
+    a:hover {
+        filter: brightness(70%);
+        color: #ebe9e9;
+    }
 
-/* --------------  */
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+    #instagram:hover {
+        cursor: pointer;
+        filter: contrast(5%);
+    }
 
-header {
-    background-color: #ffffff;
-    display: flex;
-    width: 50%;
-    border-radius: 20px;
-    margin: auto;
-    justify-content: center;
-}
+    /* --------------  */
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 
-.main-cabecalho {
-    border: solid 0px #000;
-    background-color: #ffffff;
-    display: flex;
-    position: fixed;
-    gap: 60px;
-    width: 100%;
-    padding: 5px;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: space-around;
-}
+    header {
+        background-color: #ffffff;
+        display: flex;
+        width: 50%;
+        border-radius: 20px;
+        margin: auto;
+        justify-content: center;
+    }
 
-.son-one {
-    display: flex;
-    gap: 10px;
-}
+    .main-cabecalho {
+        border: solid 0px #000;
+        background-color: #ffffff;
+        display: flex;
+        position: fixed;
+        gap: 60px;
+        width: 100%;
+        padding: 5px;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-.son-three {
-    display: flex;
-    gap: 10px;
-}
+    .son-one {
+        display: flex;
+        gap: 10px;
+    }
 
-.span {
-  height: 10px;
-  margin-top: 100px;
-  background-color: #ebe9e9;
-}
+    .son-three {
+        display: flex;
+        gap: 10px;
+    }
 
-/* ID */
-#main-titulo{
-  text-align: center;
-  font-size: 20px;
-}
-#son-descricao{
-  font-size: 18px; 
-  text-align: justify;
-}
-#son-termos{
-  color: rgb(41, 32, 229);
-  font-size: 17px;
-}
-#termos-son{
-  color: rgb(41, 122, 215);
-  font-size: 17px;
-}
-#datadia{
-  font-size: 15px; 
-  display:flex; 
-  justify-content: center;
-}
+    .span {
+        height: 10px;
+        margin-top: 100px;
+        background-color: #ebe9e9;
+    }
+
+    /* ID */
+    #main-titulo {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #son-descricao {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    #son-termos {
+        color: rgb(41, 32, 229);
+        font-size: 17px;
+    }
+
+    #termos-son {
+        color: rgb(41, 122, 215);
+        font-size: 17px;
+    }
+
+    #datadia {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-G {
+        background-color: #ebe9e9;
+        color: #000000;
+        margin-top: 50px;
+        display: flex;
+        height: 220px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bodysonG-II {
+        display: flex;
+        flex-direction: column;
+        width: 160px;
+        gap: 2px;
+        align-items: center;
+        margin-top: -40px;
+        margin-right: 70px;
+    }
+
+    #contato {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    #frase-link {
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #gmail,
+    #numero {
+        font-size: 15px;
+    }
+
+    #gmail {
+        margin-top: 10px;
+    }
+
+
+    .redes {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
-  /* IMAGENS */
-  #logo {
-      height: 80px;
-  }
 
-  #instagram {
-      height: 35px;
-      width: 34px;
-  }
+    /* IMAGENS */
+    #logo {
+        height: 80px;
+    }
 
-  /* ------ X ------ */
+    #instagram {
+        height: 35px;
+        width: 34px;
+    }
 
-  /* BOTÕES */
-  #bot {
-      background: none;
-      background-color: #212121;
-      color: #fff;
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      font-size: 15px;
-      border-radius: 20px;
-  }
+    /* ------ X ------ */
 
-  a {
-      color: #000000;
-      text-decoration: none;
-  }
+    /* BOTÕES */
+    #botao-whats {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 15px;
+        border-radius: 20px;
+    }
 
-  /* ------ X ------ */
-  /* Hovers */
-  #bot:hover {
-      filter: brightness(70%);
-      cursor: pointer;
-  }
+    #bot {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 15px;
+        border-radius: 20px;
+    }
 
-  a:hover {
-      filter: brightness(70%);
-      color: #ebe9e9;
-  }
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
 
-  #instagram:hover {
-      cursor: pointer;
-      filter: contrast(5%);
-  }
+    /* ------ X ------ */
+    /* Hovers */
+    #bot:hover {
+        filter: brightness(70%);
+        cursor: pointer;
+    }
 
-  /* --------------  */
-  body {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+    a:hover {
+        filter: brightness(70%);
+        color: #ebe9e9;
+    }
 
-  header {
-      display: flex;
-      width: 50%;
-      border-radius: 20px;
-      margin: auto;
-      justify-content: center;
-  }
+    #instagram:hover {
+        cursor: pointer;
+        filter: contrast(5%);
+    }
 
-  .main-cabecalho {
-      border: solid 0px #000;
-      background-color: #ffffff;
-      display: flex;
-      position: fixed;
-      gap: 60px;
-      width: 70%;
-      padding: 5px;
-      border-radius: 20px;
-      align-items: center;
-      justify-content: space-around;
-  }
+    /* --------------  */
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 
-  .son-one {
-      display: flex;
-      gap: 10px;
-  }
+    header {
+        display: flex;
+        width: 50%;
+        border-radius: 20px;
+        margin: auto;
+        justify-content: center;
+    }
 
-  .son-three {
-      display: flex;
-      gap: 10px;
-  }
+    .main-cabecalho {
+        border: solid 0px #000;
+        background-color: #ffffff;
+        display: flex;
+        position: fixed;
+        gap: 60px;
+        width: 70%;
+        padding: 5px;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-  .span {
-    height: 10px;
-    margin-top: 100px;
-    background-color: #ebe9e9;
-}
+    .son-one {
+        display: flex;
+        gap: 10px;
+    }
 
-  /* ID */
-#main-titulo{
-    text-align: center;
-    font-size: 20px;
-}
-#son-descricao{
-    font-size: 18px; 
-    text-align: justify;
-}
-#son-termos{
-    color: rgb(41, 32, 229);
-    font-size: 17px;
-}
-#termos-son{
-    color: rgb(41, 122, 215);
-    font-size: 17px;
-}
-#datadia{
-    font-size: 15px; 
-    display:flex; 
-    justify-content: center;
-}
+    .son-three {
+        display: flex;
+        gap: 10px;
+    }
+
+    .span {
+        height: 10px;
+        margin-top: 100px;
+        background-color: #ebe9e9;
+    }
+
+    /* ID */
+    #main-titulo {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #son-descricao {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    #son-termos {
+        color: rgb(41, 32, 229);
+        font-size: 17px;
+    }
+
+    #termos-son {
+        color: rgb(41, 122, 215);
+        font-size: 17px;
+    }
+
+    #datadia {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-G {
+        background-color: #ebe9e9;
+        color: #000000;
+        margin-top: 50px;
+        display: flex;
+        height: 220px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bodysonG-II {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 2px;
+        align-items: center;
+        margin-top: -40px;
+        margin-right: 175px;
+    }
+
+
+    #contato {
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+
+    #frase-link {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #gmail,
+    #numero {
+        font-size: 15px;
+    }
+
+    #gmail {
+        margin-top: 10px;
+    }
+
+
+    .redes {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
 }

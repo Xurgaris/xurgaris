@@ -27,7 +27,7 @@
     /* BOTÕES */
     #bot {
         background: none;
-        
+
         background-color: #212121;
         color: #fff;
         padding-left: 15px;
@@ -39,6 +39,18 @@
     }
 
     #bot-saibamais {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    #botao-whats {
         background: none;
         background-color: #212121;
         color: #fff;
@@ -73,6 +85,12 @@
         filter: contrast(5%);
     }
 
+    #bot-saibamais:hover,
+    #bot-whats:hover {
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -101,6 +119,7 @@
         display: flex;
         gap: 10px;
     }
+
     .son-three {
         display: flex;
         gap: 10px;
@@ -275,7 +294,7 @@
         justify-content: space-around;
     }
 
-    .bodysonG-I{
+    .bodysonG-I {
         width: 70px;
     }
 
@@ -287,23 +306,11 @@
         margin-left: 10px;
     }
 
-    #ul{
+    #ul {
         font-size: 10px;
         margin-left: -30px;
     }
 
-
-    #botao-whats {
-        background: none;
-        background-color: #212121;
-        color: #fff;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-size: 12px;
-        border-radius: 20px;
-    }
 
     #contato {
         font-size: 10px;
@@ -316,9 +323,10 @@
         margin-bottom: 15px;
     }
 
-    #gmail{
+    #gmail {
         margin-top: 10px;
     }
+
     #gmail,
     #numero {
         font-size: 10px;
@@ -327,7 +335,7 @@
 
     .redes {
         font-size: 10px;
-       
+
         display: flex;
         flex-direction: column;
         margin-top: -20px;
@@ -362,7 +370,9 @@
     /* ------ X ------ */
 
     /* BOTÕES */
-    #bot, #botao-whats, #bot-saibamais{
+    #bot,
+    #botao-whats,
+    #bot-saibamais {
         background: none;
         background-color: #212121;
         color: #fff;
@@ -382,7 +392,8 @@
 
     /* ------ X ------ */
     /* Hovers */
-    #bot:hover,#bot-saibamais:hover{
+    #bot:hover,
+    #bot-saibamais:hover {
         filter: brightness(70%);
         cursor: pointer;
     }
@@ -601,15 +612,16 @@
     }
 
     #gmail,
-    #numero{
+    #numero {
         font-size: 15px;
     }
-    #gmail{
+
+    #gmail {
         margin-top: 10px;
     }
 
 
-    .redes{
+    .redes {
         font-size: 15px;
         display: flex;
         flex-direction: column;
@@ -645,7 +657,9 @@
     /* ------ X ------ */
 
     /* BOTÕES */
-    #bot, #bot-saibamais,#botao-whats{
+    #bot,
+    #bot-saibamais,
+    #botao-whats {
         background: none;
         background-color: #212121;
         color: #fff;
@@ -656,7 +670,8 @@
         font-size: 15px;
         border-radius: 20px;
     }
-    #bot-saibamais{
+
+    #bot-saibamais {
         background: none;
         background-color: #212121;
         color: #fff;
@@ -667,7 +682,7 @@
         font-size: 15px;
         border-radius: 20px;
     }
- 
+
 
     a {
         color: #000000;
@@ -676,7 +691,9 @@
 
     /* ------ X ------ */
     /* Hovers */
-    #bot:hover,#bot-saibamais:hover{
+    #bot:hover,
+    #bot-saibamais:hover,
+    #botao-whats:hover {
         filter: brightness(70%);
         cursor: pointer;
     }
@@ -892,15 +909,16 @@
     }
 
     #gmail,
-    #numero{
+    #numero {
         font-size: 15px;
     }
-    #gmail{
+
+    #gmail {
         margin-top: 10px;
     }
 
 
-    .redes{
+    .redes {
         font-size: 15px;
         display: flex;
         flex-direction: column;
