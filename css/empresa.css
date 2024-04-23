@@ -188,6 +188,11 @@
         margin-top: -20px;
     }
 
+    .logos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 }
 
