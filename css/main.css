@@ -21,6 +21,14 @@
         height: 35px;
         width: 34px;
     }
+    #linked{
+        height: 35px;
+        width: 34px;
+    }
+    #x{
+        height: 35px;
+        width: 34px;
+    }
 
     /* ------ X ------ */
 
@@ -653,7 +661,14 @@
         height: 35px;
         width: 34px;
     }
-
+      #linked{
+        height: 35px;
+        width: 34px;
+    }
+    #x{
+        height: 35px;
+        width: 34px;
+    }
     /* ------ X ------ */
 
     /* BOTÕES */
@@ -705,7 +720,7 @@
 
     #instagram:hover {
         cursor: pointer;
-        filter: contrast(5%);
+        filter: contrast(70%);
     }
 
     /* --------------  */
