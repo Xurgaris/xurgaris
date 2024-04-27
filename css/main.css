@@ -106,8 +106,6 @@
     }
     .material-symbols-outlined:hover{
         filter: brightness(70%);
-        color: #ebe9e9;
-        cursor: pointer;
     }
 
     /* --------------  */
