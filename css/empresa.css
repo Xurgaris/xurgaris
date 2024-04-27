@@ -101,15 +101,19 @@
     }
 
     .son-one {
-        display: none;
+        display: flex;
+        width: 40%;
+        background-color: #0ec7ff;
     }
 
-    .son-two {
-        margin-right: 56px;
+    .son-two{
     }
+
 
     .son-three {
         display: flex;
+        width: 40px;
+        height: 100%;
     }
 
     #menu{
@@ -120,12 +124,13 @@
         border-radius: 20px;
         background-color: #ebe9e9;
         margin-top: 10px;
+        transition: all 0.100 ease;
     }
     .material-symbols-outlined{
         align-items: center;
         justify-content: center;
         font-size: 50px;
-        margin-left: 10px;
+        margin-right: 10px;
         display: flex;
     }
 
@@ -157,7 +162,6 @@
     .material-symbols-outlined {
         cursor: pointer;
     }
-
 
     /* ------------------- */
     .span {
