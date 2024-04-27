@@ -148,6 +148,7 @@
     }
 
     #menu{
+        display: none;
         background: none;
     }
     .material-symbols-outlined{
