@@ -160,6 +160,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding: 5px;
         height: auto;
         gap: 10px;
     }
@@ -175,6 +176,7 @@
     .bodyson-A {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     #main-frase {
