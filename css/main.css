@@ -1,5 +1,6 @@
 @media only screen and (max-width: 766px) {
 
+
     /* IMAGENS */
     #logo {
         height: 50px;
@@ -35,7 +36,7 @@
     /* BOTÕES */
     #bot {
         background: none;
-
+        display: none;
         background-color: #212121;
         color: #fff;
         padding-left: 15px;
@@ -98,6 +99,11 @@
         filter: brightness(70%);
         cursor: pointer;
     }
+    .material-symbols-outlined:hover{
+        filter: brightness(70%);
+        color: #ebe9e9;
+        cursor: pointer;
+    }
 
     /* --------------  */
     body {
@@ -119,7 +125,8 @@
         background-color: #ebe9e9;
         display: flex;
         position: fixed;
-        width: 100%;
+        width: 80%;
+        margin-top: 10px;
         border-radius: 20px;
         align-items: center;
         justify-content: space-around;
@@ -128,12 +135,25 @@
     .son-one {
         display: flex;
         gap: 10px;
+        width: 30%;
     }
+
 
     .son-three {
         display: flex;
         gap: 10px;
+        width: 30%;
+        align-items: flex-end;
+        justify-content: end;
     }
+
+    #menu{
+        background: none;
+    }
+    .material-symbols-outlined{
+        font-size: 45px;
+    }
+
 
 
     /* ------------------- */
