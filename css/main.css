@@ -157,6 +157,7 @@
         border-radius: 20px;
         background-color: #ebe9e9;
         margin-top: 10px;
+        transition: all 0.100 ease;
     }
     .material-symbols-outlined{
         align-items: center;
