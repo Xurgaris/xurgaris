@@ -346,6 +346,7 @@
     .main-cabecalho {
         border: solid 0px #000;
         background-color: #ebe9e9;
+        margin-top: 10px;
         display: flex;
         position: fixed;
         gap: 60px;
@@ -522,6 +523,7 @@
     .main-cabecalho {
         border: solid 0px #000;
         background-color: #ebe9e9;
+        margin-top: 10px;
         display: flex;
         position: fixed;
         gap: 60px;
