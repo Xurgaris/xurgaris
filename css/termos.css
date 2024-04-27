@@ -244,7 +244,9 @@
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
-
+    .nav{
+        display: none;
+    }
     /* IMAGENS */
     #logo {
         height: 80px;
@@ -438,7 +440,9 @@
 }
 
 @media only screen and (min-width: 1024px) {
-
+    .nav{
+        display: none;
+    }
     /* IMAGENS */
     #logo {
         height: 80px;

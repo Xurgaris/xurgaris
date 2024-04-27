@@ -466,6 +466,10 @@
     }
 
     /* --------------  */
+    .nav{
+        display: none;
+    }
+    
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin: 0;
@@ -775,6 +779,10 @@
     }
 
     /* --------------  */
+    .nav{
+        display: none;
+    }
+
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         border: 0;
