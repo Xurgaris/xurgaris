@@ -1,4 +1,4 @@
-@media only screen and (max-width: 766px){
+@media only screen and (max-width: 766px) {
 
     /* IMAGENS */
     #logo {
@@ -9,21 +9,23 @@
         height: 35px;
         width: 34px;
     }
-    #linked{
+
+    #linked {
         height: 35px;
         width: 34px;
     }
-    #x{
+
+    #x {
         height: 35px;
         width: 34px;
     }
-    
+
 
     /* ------ X ------ */
 
-    #bot,#bot-saibamais {
+    #bot{
         background: none;
-        
+        display: none;
         background-color: #212121;
         color: #fff;
         padding-left: 15px;
@@ -34,9 +36,7 @@
         border-radius: 20px;
     }
 
-    
- 
-    #btTermos{
+    #btTermos {
         color: #f70c0c;
         font-size: 15px;
     }
@@ -46,7 +46,11 @@
         text-decoration: none;
         font-size: 10px;
     }
-
+    #itens{
+        font-size: 25px;
+        margin-right: 50px;
+    }
+    
 
     /* ------ X ------ */
     /* Hovers */
@@ -65,10 +69,14 @@
         filter: contrast(70%);
     }
 
+    .material-symbols-outlined:hover {
+        filter: brightness(70%);
+    }
+
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border:0;
+        border: 0;
         margin: 0;
     }
 
@@ -81,23 +89,43 @@
     }
 
     .main-cabecalho {
-        border: solid 0px #000;
+        border: solid 0px #000000;
         background-color: #ebe9e9;
         display: flex;
         position: fixed;
-        width: 100%;
+        width: 80%;
+        margin-top: 10px;
         border-radius: 20px;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
+
     .son-one {
-        display: flex;
-        gap: 10px;
+        display: none;
+    }
+
+    .son-two {
+        margin-right: 56px;
     }
 
     .son-three {
         display: flex;
-        gap: 10px;
+    }
+
+    #menu{
+        display: none;
+        background: none;
+        position: fixed;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #ebe9e9;
+    }
+    .material-symbols-outlined{
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        margin-left: 10px;
+        display: flex;
     }
 
 
@@ -117,7 +145,7 @@
         align-items: center;
         justify-content: center;
     }
- 
+
 
     .main-G {
         background-color: #ebe9e9;
@@ -131,7 +159,7 @@
         justify-content: space-around;
     }
 
-    .bodysonG-I{
+    .bodysonG-I {
         width: 70px;
     }
 
@@ -143,7 +171,7 @@
         margin-left: 10px;
     }
 
-    #ul{
+    #ul {
         font-size: 10px;
         margin-left: -30px;
     }
@@ -172,9 +200,10 @@
         margin-bottom: 15px;
     }
 
-    #gmail{
+    #gmail {
         margin-top: 10px;
     }
+
     #gmail,
     #numero {
         font-size: 10px;
@@ -187,7 +216,7 @@
         flex-direction: column;
     }
 
-    .logos{
+    .logos {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -195,7 +224,7 @@
 
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px){
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
 
     /* IMAGENS */
     #logo {
@@ -206,11 +235,13 @@
         height: 35px;
         width: 34px;
     }
-    #linked{
+
+    #linked {
         height: 35px;
         width: 34px;
     }
-    #x{
+
+    #x {
         height: 35px;
         width: 34px;
     }
@@ -218,7 +249,8 @@
 
     /* ------ X ------ */
 
-    #bot, #botao-whats{
+    #bot,
+    #botao-whats {
         background: none;
         background-color: #212121;
         color: #fff;
@@ -229,9 +261,9 @@
         font-size: 12px;
         border-radius: 20px;
     }
-    
- 
-    #btTermos{
+
+
+    #btTermos {
         color: #f70c0c;
         font-size: 15px;
     }
@@ -263,7 +295,7 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border:0;
+        border: 0;
         margin: 0;
     }
 
@@ -316,7 +348,7 @@
         align-items: center;
         justify-content: center;
     }
- 
+
 
     .main-G {
         background-color: #ebe9e9;
@@ -351,14 +383,15 @@
     }
 
     #gmail,
-    #numero{
+    #numero {
         font-size: 15px;
     }
-    #gmail{
+
+    #gmail {
         margin-top: 10px;
     }
 
-    .redes{
+    .redes {
         font-size: 15px;
         display: flex;
         flex-direction: column;
@@ -369,164 +402,169 @@
 
 @media only screen and (min-width: 1024px) {
 
-        /* IMAGENS */
-        #logo {
-            height: 80px;
-        }
-    
-        #instagram {
-            height: 35px;
-            width: 34px;
-        }
-        #linked{
-            height: 35px;
-            width: 34px;
-        }
-        #x{
-            height: 35px;
-            width: 34px;
-        }
-    
-        /* ------ X ------ */
-    
-        /* BOTÕES */
-        #bot, #botao-whats{
-            background: none;
-            background-color: #212121;
-            color: #fff;
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size: 15px;
-            border-radius: 20px;
-        }
-     
-    
-        a {
-            color: #000000;
-            text-decoration: none;
-        }
+    /* IMAGENS */
+    #logo {
+        height: 80px;
+    }
 
-        #btTermos{
-            color: #f70c0c;
-        }
-    
-        /* ------ X ------ */
-        /* Hovers */
-        #bot:hover {
-            filter: brightness(70%);
-            cursor: pointer;
-        }
-    
-        a:hover {
-            filter: brightness(70%);
-            color: #ebe9e9;
-        }
-        
-    
-        #instagram:hover {
-            cursor: pointer;
-            filter: contrast(70%);
-        }
-    
-        /* --------------  */
-        body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            border:0;
-            margin: 0;
-        }
-    
-        header {
-            display: flex;
-            width: 50%;
-            border-radius: 20px;
-            margin: auto;
-            justify-content: center;
-        }
-    
-        .main-cabecalho {
-            border: solid 0px #000;
-            background-color: #ebe9e9;
-            display: flex;
-            position: fixed;
-            gap: 60px;
-            width: 70%;
-            height: 60px;
-            padding: 5px;
-            border-radius: 20px;
-            align-items: center;
-            justify-content: space-around;
-        }
-    
-        .son-one {
-            display: flex;
-            gap: 10px;
-        }
+    #instagram {
+        height: 35px;
+        width: 34px;
+    }
 
-        .son-three {
-            display: flex;
-            gap: 10px;
-        }
-    
-    
-        /* ------------------- */
-        .span {
-            height: 10px;
-            margin-top: 100px;
-            background-color: #ebe9e9;
-        }
-    
-        /* ------------------- */
-      
-        .main-G {
-            background-color: #ebe9e9;
-            color: #000000;
-            margin-top: 50px;
-            display: flex;
-            height: 250px;
-            width: 100%;
-            align-items: center;
-            justify-content: space-between;
-        }
-    
-        .bodysonG-II {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-            gap: 2px;
-            align-items: center;
-            margin-top: -40px;
-            margin-right: 100px;
-        }
-    
-    
-        #contato {
-            font-size: 20px;
-            margin-bottom: 2px;
-        }
-    
-        #frase-link {
-            font-size: 16px;
-            text-align: center;
-        }
-    
-        #gmail,
-        #numero{
-            font-size: 15px;
-        }
-        #gmail{
-            margin-top: 10px;
-        }
-        .redes{
-            font-size: 15px;
-            display: flex;
-            flex-direction: column;
-            margin-right: 30px;
-        }
-        
-        .logos{
-            display: flex;
-            flex-direction: row;
-        }
+    #linked {
+        height: 35px;
+        width: 34px;
+    }
+
+    #x {
+        height: 35px;
+        width: 34px;
+    }
+
+    /* ------ X ------ */
+
+    /* BOTÕES */
+    #bot,
+    #botao-whats {
+        background: none;
+        background-color: #212121;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 15px;
+        border-radius: 20px;
+    }
+
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    #btTermos {
+        color: #f70c0c;
+    }
+
+    /* ------ X ------ */
+    /* Hovers */
+    #bot:hover {
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
+    a:hover {
+        filter: brightness(70%);
+        color: #ebe9e9;
+    }
+
+
+    #instagram:hover {
+        cursor: pointer;
+        filter: contrast(70%);
+    }
+
+    /* --------------  */
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 0;
+        margin: 0;
+    }
+
+    header {
+        display: flex;
+        width: 50%;
+        border-radius: 20px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .main-cabecalho {
+        border: solid 0px #000;
+        background-color: #ebe9e9;
+        display: flex;
+        position: fixed;
+        gap: 60px;
+        width: 70%;
+        height: 60px;
+        padding: 5px;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .son-one {
+        display: flex;
+        gap: 10px;
+    }
+
+    .son-three {
+        display: flex;
+        gap: 10px;
+    }
+
+
+    /* ------------------- */
+    .span {
+        height: 10px;
+        margin-top: 100px;
+        background-color: #ebe9e9;
+    }
+
+    /* ------------------- */
+
+    .main-G {
+        background-color: #ebe9e9;
+        color: #000000;
+        margin-top: 50px;
+        display: flex;
+        height: 250px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bodysonG-II {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 2px;
+        align-items: center;
+        margin-top: -40px;
+        margin-right: 100px;
+    }
+
+
+    #contato {
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+
+    #frase-link {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #gmail,
+    #numero {
+        font-size: 15px;
+    }
+
+    #gmail {
+        margin-top: 10px;
+    }
+
+    .redes {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: row;
+    }
 }

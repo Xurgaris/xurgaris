@@ -23,7 +23,7 @@
     /* BOTÕES */
     #bot {
         background: none;
-
+        display: none;
         background-color: #212121;
         color: #fff;
         padding-left: 15px;
@@ -51,6 +51,11 @@
         text-decoration: none;
     }
 
+    #itens{
+        font-size: 25px;
+        margin-right: 50px;
+    }
+    
     /* ------ X ------ */
     /* Hovers */
     #bot:hover {
@@ -68,6 +73,10 @@
         filter: contrast(70%);
     }
 
+    .material-symbols-outlined:hover {
+        filter: brightness(70%);
+    }
+
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -82,27 +91,47 @@
         margin: auto;
         justify-content: center;
     }
-
     .main-cabecalho {
-        border: solid 0px #000;
+        border: solid 0px #000000;
         background-color: #ebe9e9;
         display: flex;
         position: fixed;
-        width: 100%;
+        width: 80%;
+        margin-top: 10px;
         border-radius: 20px;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
 
+
     .son-one {
-        display: flex;
+        display: none;
         gap: 10px;
+    }
+
+    .son-two {
+        margin-right: 56px;
     }
 
     .son-three {
         display: flex;
-        gap: 10px;
+    }
+
+    #menu{
+        display: none;
+        background: none;
+        position: fixed;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #ebe9e9;
+    }
+    .material-symbols-outlined{
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        margin-left: 10px;
+        display: flex;
     }
 
     .span {
