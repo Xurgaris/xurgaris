@@ -82,7 +82,7 @@
 
     .main-cabecalho {
         border: solid 0px #000;
-        background-color: #fff;
+        background-color: #ebe9e9;
         display: flex;
         position: fixed;
         width: 100%;
@@ -277,7 +277,7 @@
 
     .main-cabecalho {
         border: solid 0px #000;
-        background-color: #ffffff;
+        background-color: #ebe9e9;
         display: flex;
         position: fixed;
         gap: 60px;
@@ -447,7 +447,7 @@
     
         .main-cabecalho {
             border: solid 0px #000;
-            background-color: #fff;
+            background-color: #ebe9e9;
             display: flex;
             position: fixed;
             gap: 60px;
