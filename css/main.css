@@ -170,7 +170,34 @@
         display: flex;
     }
 
+    #menu {
+        position: absolute;
+        left: -200px; /* Inicialmente oculto */
+        top: 0;
+        margin-top: 60px;
+        background-color: #f4f4f4;
+        width: 200px;
+        transition: left 0.3s ease; /* Adiciona uma transição suave */
+        z-index: 1;
+    }
 
+    .nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav ul li {
+        padding: 10px;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .material-symbols-outlined {
+        cursor: pointer;
+    }
 
     /* ------------------- */
     .span {
