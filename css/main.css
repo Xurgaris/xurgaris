@@ -124,8 +124,8 @@
     }
 
     .main-cabecalho {
-        border: solid 0px #000;
-        background-color: #fff;
+        border: solid 0px #000000;
+        background-color: #ebe9e9;
         display: flex;
         position: fixed;
         width: 80%;
