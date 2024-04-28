@@ -1,6 +1,4 @@
 @media only screen and (max-width: 766px) {
-
-    
     /* IMAGENS */
     #logo {
         height: 50px;
@@ -111,8 +109,6 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border:0;
-        margin: 0;
     }
 
     header {
@@ -502,8 +498,6 @@
 
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin: 0;
-        border: 0;
     }
 
     header {
@@ -732,10 +726,11 @@
 
     #banner {
         height: 300px;
+        margin-left: 5px;
     }
 
     #banner2 {
-        height: 330px;
+        height: 320px;
     }
 
     #banner3 {
@@ -815,8 +810,6 @@
 
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: 0;
-        margin: 0;
     }
 
     header {

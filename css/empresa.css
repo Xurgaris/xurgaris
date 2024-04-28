@@ -76,8 +76,6 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: 0;
-        margin: 0;
     }
 
     header {
@@ -105,10 +103,6 @@
         width: 40%;
         background-color: #0ec7ff;
     }
-
-    .son-two{
-    }
-
 
     .son-three {
         display: flex;
@@ -331,8 +325,6 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: 0;
-        margin: 0;
     }
 
     header {
@@ -508,8 +500,6 @@
     /* --------------  */
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: 0;
-        margin: 0;
     }
 
     header {
