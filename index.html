@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2BB1S3294"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-E2BB1S3294');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xurgaris</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/faviicon.png" type="favicon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilo/main.css">
 </head>
 
 <body>
-    <!-- CABEÇALHO -->
     <header>
         <div class="main-cabecalho">
-            <!-- DIV FILHO 1 -->
             <div class="son-one">
                 <div>
                     <a href="index.html">
@@ -36,12 +25,11 @@
                     </a>
                 </div>
             </div>
-            <!-- DIV FILHO 2 -->
+
             <div class="son-two">
-                <h1 id="marca">Xurgaris</h1>
-                <!-- <img id="logo" src="img/xurgaris.png" alt=""> -->
+                <h1 id="xurgaris">Xurgaris</h1>
             </div>
-            <!-- DIV FILHO 3 -->
+
             <div class="son-three">
                 <div>
                     <a href="abas/empresa.html">
@@ -54,167 +42,131 @@
                     </a>
                 </div>
             </div>
-            
-            <div class="nav">
-                <span class="material-symbols-outlined" onclick="clickMenu()">menu</span>
-                <div id="menu">
-                    <ul>
-                        <li style="font-size: 20px;"><a id="itens" href="index.html">Home</a></li>
-                        <li style="font-size: 20px;"><a id="itens" href="abas/empresa.html">Sobre nós</a></li>
-                        <li style="font-size: 20px;"><a id="itens" href="abas/empresa.html">Serviços</a></li>
-                        <li style="font-size: 20px;"><a id="itens" href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </header>
 
 
+    <!-- Corpo -->
     <div class="container">
-        <div class="main-conteudo">
-
+        <div class="conteudo-corpo">
             <div class="main-A">
-                <img id="banner" src="img/1.png" alt="">
-                <!-- <div class="bodyson-A">
-                    <h1 id="main-frase">{ <span style="color: rgb(3, 186, 186);">Desenvolvendo</span> juntos o futuro
-                        do seu negócio }</h1>
-                    <div>
-                        <a href="#bodyfraseI-B">
-                            <button id="bot-saibamais">
-                                Saiba Mais
-                            </button>
-                        </a>
-                    </div>
-                    </a>
-                </div> -->
+                <img id="primeiro-banner-A" src="img/site (3).png" alt="">
+                <h1 id="titulo-A">{ <span style="color: aqua;">Desenvolvendo</span> juntos o futuro do seu negócio }
+                </h1>
             </div>
 
             <div class="main-B">
-                <h1 id="bodyfraseI-B">Conectando marcas ao sucesso.</h1>
-                <span id="bodyfraseII-B">
+                <img id="segundo-banner-B" src="img/site (1).png" alt="">
+                <div class="bodysonB-I">
+                    <h1 id="tituloB-I">Perfil da Empresa</h1>
+                    <p id="textoB-I">
+                        Fundada em 2023, a Xurgaris é uma empresa de serviços completos, oferecendo soluções acessíveis
+                        em Marketing Digital para pessoas e negócios locais e internacionais.
+                    </p>
+                </div>
+            </div>
+
+            <div class="main-C">
+                <h1 id="tituloC-I">Nossos Serviços</h1>
+                <span id="textoC-I">Nossos serviços abrangem diversas áreas do marketing digital e
+                    desenvolvimento web, garantindo que sua marca se destaque em um mercado competitivo. Conheça alguns
+                    dos serviços que oferecemos:
+
+                </span>
+                <div class="bodysonC-I">
+                    <div class="bodysonCC-I">
+                        <h3>Desenvolvimento Web</h3>
+                        <span class="material-symbols-outlined">
+                            code
+                        </span>
+                        <p id="textoCC-I">
+                            Temos a solução que você precisa skdjaskdj aksd jaskl djaskld jalkd askl djskadj
+                        </p>
+                    </div>
+
+                    <div class="bodysonCC-II">
+                        <h3>Social Midia</h3>
+                        <span class="material-symbols-outlined">
+                            filter_hdr
+                        </span>
+                        <p id="textoCC-I">
+                            Temos a solução que você precisa skdjaskdj aksd jaskl djaskld jalkd askl djskadj
+                        </p>
+                    </div>
+
+                    <div class="bodysonCC-III">
+                        <h3>Design Gráfico</h3>
+                        <span class="material-symbols-outlined">
+                            brush
+                        </span>
+                        <p id="textoCC-I">
+                            Temos a solução que você precisa skdjaskdj aksd jaskl djaskld jalkd askl djskadj
+                        </p>
+                    </div>
+
+                </div>
+                <button id="bot-saibamais-C">Saiba mais</button>
+            </div>
+
+            <div class="main-D">
+                <img id="terceiro-banner-C" src="img/resp.png" alt="">
+                <span id="textoD-I">Nossos sites são projetados e desenvolvidos para se adaptarem perfeitamente a
+                    qualquer
+                    tela, seja um desktop, laptop, tablet ou smartphone.</span>
+            </div>
+
+            <div class="main-E">
+                <h1 id="tituloE-I">Conectando marcas ao sucesso.</h1>
+                <span id="textoE-I">
                     Elevamos sua visibilidade e impacto no mercado digital.
                 </span>
             </div>
 
-            <div style="margin-top: 70px;">
-                <img src="img/2.png" id="banner" alt="">
-            </div>
-
-
-            <div class="main-C">
-                <div class="bodysonC-I">
-
-                    <h2>Estratégia</h2>
-                    <span id="text-estrat">
-                        Desenvolvemos estratégias de marketing personalizadas
-                        para impulsionar o crescimento e a visibilidade
-                        da sua marca, conectando-a ao seu público-alvo
-                        de maneira eficaz.</span>
-                </div>
-                <div class="bodysonC-II">
-                    <h2>Inovação</h2>
-                    <span id="text-estrat">
-                        Utilizamos as últimas tendências e tecnologias
-                        inovadoras para criar campanhas criativas e impactantes
-                        que destacam a sua empresa em um mercado competitivo.
-                    </span>
-                </div>
-                <div class="bodysonC-III">
-                    <h2>Criatividade</h2>
-                    <span id="text-estrat">
-                        Exploramos ideias inovadoras e soluções criativas
-                        para destacar a marca dos nossos clientes e proporcionar
-                        experiências únicas aos seus públicos-alvo.
-                    </span>
-                </div>
-
-            </div>
-            <div>
-                <img src="img/3.png" id="banner" alt="">
-            </div>
-
-            <!-- <div class="main-D">
-                <img id="banner2" src="img/banner2.jpeg" alt="">
-                <div class="bodysonD-I">
-                    <h1 id="titulo-website">WebSite</h1>
-                    <p id="texto-website">Design responsivo para alcançar todos os dispositivos.</p>
-                </div>
-            </div> -->
-
-            <!-- <div class="main-E">
-                <div class="bodysonE-I">
-                    <h1 id="titulo-website">Social Midia</h1>
-                    <p id="texto-website">Explorando criatividade e estilo, oferecemos o melhor em design e fotografia.
-                    </p>
-                </div>
-                <img id="banner3" src="img/banner3.jpeg" alt="">
-            </div> -->
-
             <div class="main-F">
+                <span class="material-symbols-outlined">
+                    communication
+                    </span>
+                <h1 id="tituloF-I">Entre em contato conosco</h1>
                 <div class="bodysonF-I">
-                    <h1>Juntos, alcançaremos grandes conquistas!</h1>
+                        <a href="">
+                            <button id="bot-empresa-FF">Empresa</button>
+                        </a>
+
+                        <a href="">
+                            <button id="bot-pessoafisica-FF">Pessoa Física</button>
+                        </a>
                 </div>
             </div>
 
             <div class="main-G">
                 <div class="bodysonG-I">
-                    <ul id="ul">
-                        <li >
-                            <a href="index.html" style="color: #fff;">
-                                Página Inicial
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="abas/empresa.html" style="color: #fff">
-                                Sobre nós
-                            </a>
-                        </li>
-                        <li>
-                            <a href="abas/empresa.html" style="color: #fff">
-                                Serviços
-                            </a>
-                        </li>
-                        <li>
-                            <a href="abas/termos.html" style="color: #fff">
-                                Termos de Contratação de Serviços
-                            </a>
-                        </li>
+                    <ul id="uls" style="color: #fff;">
+                        <li>Home</li>
+                        <li>Sobre nós</li>
+                        <li>Serviços</li>
+                        <li>Contato</li>
+                        <li>Termos de Contratação de Serviços</li>
                     </ul>
                 </div>
 
                 <div class="bodysonG-II">
-                    <h2 id="contato">Informações para Contato</h2>
-                    <p id="frase-link">Fale Conosco através do WhatsApp</p>
-                    <a href="https://wa.link/des569">
-                        <button id="botao-whats">Empresa</button>
-                    </a>
-                    <a href="https://wa.link/nsap82">
-                        <button id="botao-whats">Pessoa Física</button>
-                    </a>
-                    <span id="gmail">xurgaris@gmail.com</span>
-                    <span id="numero">(82) 99411-0414</span>
+                    <img id="logoG" src="img/faviicon.png" alt="">
+                    <h1 id="tituloGG-II">Xurgaris</h1>
+                    <span id="subtituloGG-I">Todos os Direitos Reservados</span>
                 </div>
 
-                <div class="redes" style="display: flex;align-items: center;justify-content: center;">
-                    <span>Redes Sociais</span>
-                    <div class="logos">
-                        <a href="https://www.instagram.com/xurgaris/">
-                            <img id="instagram" src="img/instagram.png" alt="">
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/company/xurgaris/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B9IkLxTCvS4yH95d%2BqFc7ng%3D%3D">
-                            <img id="linked" src="img/linkedlin.png" alt="">
-                        </a>
-                        <a href="https://twitter.com/xurgaris">
-                            <img id="x" src="img/logo-x.png" alt="">
-                        </a>
+
+                <div class="bodysonG-III">
+                    <h1 id="tituloGG-I">Redes Sociais</h1>
+                    <div class="redes">
+                        <img id="instagram" src="img/instagram.png" alt="">
+                        <img id="linkedlin" src="img/linkedlin.png" alt="">
+                        <img id="x" src="img/logo-x.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="JavaScript/script.js"></script>
 </body>
 
 </html>
