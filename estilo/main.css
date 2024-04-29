@@ -6,6 +6,11 @@ body {
 
 a{
     text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    cursor: pointer;
+    filter: brightness(70%);
 }
 
 header {
