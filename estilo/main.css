@@ -4,6 +4,10 @@ body {
     border: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 header {
     display: flex;
     width: 100%;
@@ -126,6 +130,24 @@ header {
 #textoB-I {
     color: #000000;
     font-size: 15px;
+}
+
+#bot-saibamais-B{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#bot-saibamais-B:hover{
+    filter: brightness(70%);
+    cursor: pointer;
 }
 
 
@@ -265,9 +287,20 @@ header {
 
 #tituloF-I {}
 
-.bodysonF-I {
+.bodysonF-I{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodysonFFF-II {
     display: flex;
     gap: 100px;
+}
+#email{
+    color: #000000;
+    margin-top: 20px;
+    font-size: 15px;
 }
 
 .bodysonFF-I,
@@ -347,6 +380,7 @@ header {
     color: #fff;
     font-size: 10px;
 }
+
 
 .bodysonG-III{
     margin-right: 20px;
