@@ -2,6 +2,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     border: 0;
+    background-color: #a3a3a3;
 }
 
 a {
@@ -24,9 +25,9 @@ header {
 
 .main-cabecalho {
     border: solid 0px #000;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    -moz-backdrop-filter: blur(8px);
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    -moz-backdrop-filter: blur(35px);
     padding: 5px;
     height: 80px;
     width: 100%;
@@ -133,12 +134,12 @@ header {
 }
 
 .main-A {
-    margin-top: -100px; /* Reduzi a margem superior */
+    margin-top: -50px; /* Reduzi a margem superior */
     backdrop-filter: blur(35px);
     -webkit-backdrop-filter: blur(35px);
     -moz-backdrop-filter: blur(35px);
-    background-color: #000000;
-    border-radius: 20px;
+
+    background-color: #f4f4f4;
     width: 90%;
     height: auto;
     padding: 10px;
@@ -149,12 +150,12 @@ header {
 }
 
 #tituloA-I {
-    color: #ffffff;
+    color: #000000;
     font-size: 15px;
 }
 
 #textoA-I {
-    color: #ffffff;
+    color: #000000;
     text-align: justify;
     font-size: 10px;
 }
@@ -167,10 +168,10 @@ header {
 
 #titulos {
     font-size: 15px;
-    color: #fff;
+    color: #000000;
 }
 span{
-    color: #fff
+    color: #000000
 }
 
 .bodysonAA-I {
@@ -193,7 +194,7 @@ span{
     border: 0;
     font-size: 10px;
     text-decoration: wavy;
-    color: #fff;
+    color: #000000;
 }
 
 #bot-termos:hover {
