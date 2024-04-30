@@ -24,9 +24,9 @@
     
     .main-cabecalho {
         border: solid 0px #000;
-        backdrop-filter: blur(35px);
-        -webkit-backdrop-filter: blur(35px);
-        -moz-backdrop-filter: blur(35px);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        -moz-backdrop-filter: blur(8px);
         padding: 5px;
         height: 80px;
         width: 100%;
