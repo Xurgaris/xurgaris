@@ -1,11 +1,8 @@
 body {
-    background-color: #212121;
-}
-
-body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     border: 0;
+    background-color: #333;
 }
 
 a {
@@ -43,23 +40,9 @@ header {
     justify-content: space-around;
 }
 
-.son-one {
-    display: flex;
-    gap: 10px;
-}
-
-.son-three {
-    display: flex;
-    gap: 10px;
-}
-
 
 #bot {
-    border: none;
-    background: none;
-    font-size: 15px;
-    font-weight: bolder;
-    color: #ffffff;
+    display: none;
 }
 
 #bot:hover {
@@ -71,25 +54,87 @@ header {
     color: #fff;
 }
 
+
+.nav {
+    position: relative;
+    margin-top: -460px;
+    margin-left: 300px;
+}
+
+#menu {
+    display: none;
+    ;
+}
+
+#menu {
+    position: absolute;
+    left: -200px;
+    /* Inicialmente oculto */
+    top: 0;
+    background-color: #f4f4f4;
+    width: 200px;
+    transition: left 0.3s ease;
+    /* Adiciona uma transição suave */
+    z-index: 1;
+    margin-top: 60px;
+    margin-left: 10px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#itens {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#itens:hover {
+    filter: brightness(70%);
+    color: #f4f4f4;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav ul li {
+    padding: 10px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+
+
 .conteiner {}
 
 .conteudo-corpo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 #primeiro-banner-A {
-    height: 627px;
+    height: 185px;
 }
 
 .main-A {
-    margin-top: -500px;
+    margin-top: -100px;
     backdrop-filter: blur(35px);
     -webkit-backdrop-filter: blur(35px);
     -moz-backdrop-filter: blur(35px);
     background-color: #e8e8e8;
-    width: 80%;
+    width: 90%;
     height: 350px;
     padding: 10px;
     display: flex;
@@ -105,15 +150,18 @@ header {
 #textoA-I{
     color: #212121;
     text-align: justify;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .ceos{
     display: flex;
-    gap: 100px;
+    gap: 10px;
+}
+#ceo{
+    font-size: 10px;
 }
 
 #logo-ceos{
-    height: 50px;
+    height: 40px;
     margin-top: -15px;
 }

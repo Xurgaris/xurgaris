@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -17,12 +17,12 @@
         <div class="main-cabecalho">
             <div class="son-one">
                 <div>
-                    <a href="../index.html">
+                    <a href="index.html">
                         <button id="bot">Home</button>
                     </a>
                 </div>
                 <div>
-                    <a href="empresa.html">
+                    <a href="#segundo-banner-B">
                         <button id="bot">Sobre nós</button>
                     </a>
                 </div>
@@ -34,18 +34,19 @@
 
             <div class="son-three">
                 <div>
-                    <a href="servicos.html">
+                    <a href="#tituloC-I">
                         <button id="bot">Serviços</button>
                     </a>
                 </div>
                 <div>
-                    <a href="../index.html">
+                    <a href="#contato">
                         <button id="bot">Contato</button>
                     </a>
                 </div>
             </div>
         </div>
     </header>
+
 
     <div class="conteiner">
         <div class="conteudo-corpo">
@@ -71,14 +72,25 @@
                 </br>
                 </p>
                 <div class="ceos">
-                    <span>Daniel Nascimento - CEO</span>
+                    <span id="ceo">Daniel Nascimento - CEO</span>
                     <img id="logo-ceos"  src="../img/xurgaris.png" alt="">
-                    <span>Matheus Vinicius - CEO</span>
+                    <span id="ceo">Matheus Vinicius - CEO</span>
                 </div>
-                
+            </div>
+            <div class="nav">
+                <span style="color: #fff;margin-top: 15px;margin-left: -30px;font-size: 40px;" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+                <div id="menu">
+                    <ul>
+                        <li style="font-size: 20px;"><a id="itens" href="index.html">Home</a></li>
+                        <li style="font-size: 20px;"><a id="itens" href="empresa.html">Sobre nós</a></li>
+                        <li style="font-size: 20px;"><a id="itens" href="empresa.html">Serviços</a></li>
+                        <li style="font-size: 20px;"><a id="itens" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
