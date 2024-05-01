@@ -208,19 +208,6 @@
         font-size: 10px;
     }
 
-    #bot-saibamais-B {
-        width: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background-color: #000000;
-        color: #ffffff;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
     #bot-saibamais-B:hover {
         filter: brightness(70%);
@@ -276,7 +263,7 @@
         height: 79px;
         align-items: center;
         text-align: center;
-        border-radius: 20px;s
+        border-radius: 20px;
     }
 
     .bodysonCC-I:hover,
@@ -293,26 +280,6 @@
 
     #textoCC-I {
         display: none;
-    }
-
-    #bot-saibamais-C {
-        margin-top: -30px;
-        width: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background-color: #ffffff;
-        color: #000000;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    #bot-saibamais-C:hover {
-        filter: brightness(70%);
-        cursor: pointer;
     }
 
 
@@ -668,25 +635,6 @@
         font-size: 15px;
     }
 
-    #bot-saibamais-B {
-        width: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background-color: #000000;
-        color: #ffffff;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #bot-saibamais-B:hover {
-        filter: brightness(70%);
-        cursor: pointer;
-    }
-
 
 
     .main-C {
@@ -753,26 +701,6 @@
 
     #textoCC-I {
         font-size: 9px;
-    }
-
-    #bot-saibamais-C {
-        margin-top: -10px;
-        width: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background-color: #ffffff;
-        color: #000000;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #bot-saibamais-C:hover {
-        filter: brightness(70%);
-        cursor: pointer;
     }
 
 
@@ -1145,25 +1073,6 @@
         font-size: 15px;
     }
 
-    #bot-saibamais-B {
-        width: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background-color: #000000;
-        color: #ffffff;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #bot-saibamais-B:hover {
-        filter: brightness(70%);
-        cursor: pointer;
-    }
-
 
 
     .main-C {
@@ -1225,25 +1134,6 @@
         font-size: 15px;
     }
 
-    #bot-saibamais-C {
-        margin-top: -30px;
-        width: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        background-color: #ffffff;
-        color: #000000;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #bot-saibamais-C:hover {
-        filter: brightness(70%);
-        cursor: pointer;
-    }
 
 
 
