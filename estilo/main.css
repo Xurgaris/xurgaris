@@ -76,7 +76,7 @@
         left: -200px;
         /* Inicialmente oculto */
         top: 0;
-        background-color: #f4f4f4;
+        background-color: #333;
         width: 200px;
         transition: left 0.3s ease;
         /* Adiciona uma transição suave */
@@ -110,7 +110,7 @@
 
     .nav ul li a {
         text-decoration: none;
-        color: #333;
+        color: #ffffff;
     }
 
     .material-symbols-outlined {
