@@ -29,7 +29,7 @@
         -webkit-backdrop-filter: blur(8px);
         -moz-backdrop-filter: blur(8px);
         padding: 5px;
-        height: 70px;
+        height: 80px;
         width: 100%;
         gap: 60px;
 
@@ -128,6 +128,7 @@
         align-items: center;
         flex-direction: column;
         gap: 30px;
+        width: 100%;
         height: 100vh;
     }   
 
@@ -135,30 +136,30 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        align-items: center;
+       
     }
     
 
-    #primeiro-banner-A {
-        height: 203px;
+    #primeiro-banner-AA {
+        height: 100vh;
+        width: 100%;
+    }
+    #primeiro-banner-A{
+        display: none;
     }
 
-    #titulo-A {
-        margin-top: -190px;
-        text-align: center;
-        font-size: 20px;
-        color: #fff;
-
-    }
     #bot-saibamais-A {
-        width: 60px;
+        width: auto;
         display: flex;
-        align-items: center;
-        justify-content: center;
         border: none;   
         background-color: #333;
-        font-size: 8px;
-        margin-top: -87px;
-        margin-left: 15px;
+        font-size: 20px;
+        margin-top: -140px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         color: #ffffff;
         
        
@@ -175,18 +176,21 @@
     .main-B {
         background-color: #ffffff;
         margin-top: 20px;
-        margin-bottom: -30px;
+        margin-bottom: 30px;
         display: flex;
         padding: 5px;
         width: 99, 1%;
         height: 200px;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
 
     #segundo-banner-B {
         height: 100px;
         margin-left: 5px;
+        margin-top: 10px;
+     
     }
 
     .bodysonB-I {
@@ -196,16 +200,19 @@
         align-items: center;
         text-align: center;
         padding: 5px;
+        margin-top: 10px;
+        margin-bottom: -20px;
     }
 
     #tituloB-I {
         color: #000000;
-        font-size: 15px;
+        font-size: 20px;
+        margin-bottom: -10px;
     }
 
     #textoB-I {
         color: #000000;
-        font-size: 10px;
+        font-size: 15px;
     }
 
 
@@ -219,8 +226,8 @@
     .main-C {
         background-color: #212121;
         display: flex;
-        width: 97, 1%;
-        height: 300px;
+        width: 97%;
+        height: auto;
         padding: 5px;
         flex-direction: column;
         gap: 50px;
@@ -231,22 +238,26 @@
     #tituloC-I {
         display: flex;
         color: #fff;
-        font-size: 15px;
+        font-size: 20px;
         align-items: flex-start;
         justify-content: center;
+        margin-top: 35px;
     }
 
     #textoC-I {
         color: #fff;
         text-align: center;
-        font-size: 10px;
-        margin-top: -30px;
+        font-size: 15px;
+        margin-top: -50px;
     }
 
     .bodysonC-I {
         display: flex;
         align-items: center;
+        flex-direction: column;
         gap: 15px;
+        margin-top: -10px;
+        margin-bottom: 30px;
     }
 
     .bodysonCC-I,
@@ -259,11 +270,12 @@
         -moz-backdrop-filter: blur(8px);
         flex-direction: column;
         display: flex;
-        width: 100px;
-        height: 79px;
+        width: 300px;
+        height: auto;
         align-items: center;
         text-align: center;
         border-radius: 20px;
+        margin-bottom: 20px;
     }
 
     .bodysonCC-I:hover,
@@ -273,21 +285,21 @@
     }
 
     #titulos {
-        font-size: 7px;
+        font-size: 20px;
     }
 
 
 
     #textoCC-I {
-        display: none;
+       font-size: 15px;
     }
 
 
 
     .main-D {
         background-color: #fff;
-        height: 200px;
-        width: 70%;
+        height: auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -296,11 +308,11 @@
     }
 
     #terceiro-banner-C {
-        height: 100px;
+        height: 130px;
     }
 
     #textoD-I {
-        font-size: 10px;
+        font-size: 15px;
         text-align: center;
     }
 
@@ -310,7 +322,7 @@
     .main-E {
         background-color: #212121;
         width: 100%;
-        height: 250px;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -319,12 +331,15 @@
 
     #tituloE-I {
         color: #fff;
-        font-size: 15px;
+        font-size: 20px;
+        margin-top: 50px;
     }
 
     #textoE-I {
         color: #fff;
-        font-size: 10px;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 50px;
     }
 
 
@@ -332,18 +347,18 @@
     .main-F {
         display: flex;
         flex-direction: column;
-        height: 200px;
+        height: auto;
         width: 100%;
         align-items: center;
         justify-content: center;
     }
 
     .material-symbols-outlined {
-        font-size: 50px;
+        font-size: 80px;
     }
 
     #tituloF-I {
-        font-size: 15px;
+        font-size: 20px;
         margin-top: -10px;
     }
 
@@ -361,7 +376,7 @@
     #email {
         color: #000000;
         margin-top: 20px;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .bodysonFF-I,
@@ -411,28 +426,31 @@
     .main-G {
         display: flex;
         background-color: #212121;
-        height: 100px;
+        height: auto;
         width: 100%;
         align-items: center;
         justify-content: space-between;
     }
 
     #uls {
-        font-size: 6px;
+        font-size: 10px;
         margin-left: -20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
-    .bodysonG-I {}
+    .bodysonG-I {
+        width: 100px;
+    }
 
     .bodysonG-II {
         align-items: center;
         display: flex;
         flex-direction: column;
-
     }
 
     #logoG {
-        height: 20px
+        height: 30px
     }
 
     #tituloGG-II {
@@ -442,7 +460,7 @@
 
     #subtituloGG-I {
         color: #fff;
-        font-size: 5px;
+        font-size: 7px;
     }
 
 
@@ -458,7 +476,10 @@
         color: #fff;
     }
 
-    .redes {}
+    .redes {
+        display: flex;
+        flex-direction: column;
+    }
 
     #instagram,
     #linkedlin,
@@ -583,9 +604,12 @@
         filter: brightness(70%);
     }
 
-    #primeiro-banner-A {
-      height: 440px;
+    #primeiro-banner-AA {
+      height: 100vh;
       width: 100%;
+    }
+    #primeiro-banner-A{
+        display: none;
     }
 
     #titulo-A {
