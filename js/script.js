@@ -10,5 +10,6 @@ function clickMenu(){
     }
 }
 
-// Remove o fragmento da URL atual
-history.replaceState({}, document.title, window.location.pathname);
+window.addEventListener('load', function() {
+    history.replaceState({}, document.title, window.location.pathname);
+});
