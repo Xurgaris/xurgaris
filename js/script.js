@@ -9,3 +9,6 @@ function clickMenu(){
         menu.style.color = "#fff"
     }
 }
+
+// Remove o fragmento da URL atual
+history.replaceState({}, document.title, window.location.pathname);
