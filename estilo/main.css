@@ -57,7 +57,7 @@
     }
 
     #xurgaris {
-        color: #fff;
+        color: #ffffff;
         font-size: 20px;
         margin-left: 20px;
     }
@@ -134,14 +134,13 @@
     .main-A {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
-
-    #cel-banner-1 {
-        height: 300px;
-    }
+    
 
     #primeiro-banner-A {
-        display: none;
+        height: 203px;
+        margin-top: 10px;
     }
 
     #titulo-A {
@@ -151,6 +150,25 @@
         color: #fff;
 
     }
+    #bot-saibamais-A {
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;   
+        background-color: #333;
+        font-size: 8px;
+        margin-top: -87px;
+        margin-left: 15px;
+        color: #ffffff;
+        
+       
+    }
+    #bot-saibamais-A:hover{
+        cursor: pointer;
+        filter: brightness(70%);
+    }
+
 
 
 
@@ -575,16 +593,33 @@
     .main-A {
         display: flex;
         flex-direction: column;
+        margin-bottom: 80px;
         width: 100%;
-        height: auto;
+       
     }
-
-    #cel-banner-1 {
-        display: none;
+    #bot-saibamais-A {
+        width: 163px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;   
+        background-color: #333;
+        margin-top: -180px;
+        margin-left: 35px;
+        color: #ffffff;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #bot-saibamais-A:hover{
+        cursor: pointer;
+        filter: brightness(70%);
     }
 
     #primeiro-banner-A {
-        height: 425px;
+      height: 440px;
+      width: 100%;
     }
 
     #titulo-A {
@@ -660,7 +695,7 @@
         display: flex;
         width: 99%;
         height: 520px;
-        padding: 5px;
+        padding: 3px;
         flex-direction: column;
         gap: 50px;
         justify-content: center;
@@ -1026,13 +1061,51 @@
     }
 
     #titulo-A {
-        margin-top: -150px;
+        margin-top: -200px;
         text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         color: #fff;
 
+    }   
+
+    #bot-saibamais-A {
+        width: 163px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;   
+        background-color: #333;
+        margin-top: -263px;
+        margin-bottom: 200px;
+        margin-left: 65px;
+        color: #ffffff;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
+    #bot-saibamais-A:hover{
+        cursor: pointer;
+        filter: brightness(70%);
+    }
+    #span-A {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        font-size: 15px;
+        margin-top: -435px;
+        margin-bottom: 180px;
+        margin-left: -10px;
+        color: #ffffff;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
 
 
@@ -1065,6 +1138,7 @@
     #tituloB-I {
         color: #000000;
         font-size: 25px;
+        
     }
 
     #textoB-I {
