@@ -255,16 +255,24 @@
         border-radius: 10px;
         margin-top: 10px;
         margin-left: 30px;
+        position: relative;
         border: 0;
     }
 
     .conteudoC {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 30px;
     }
 
-    .card-C-I {
+    .conteudoC.active {
+        display: flex;
+    }
+
+
+    .card-C-I,
+    .card-C-II,
+    .card-C-III {
         border: none;
         display: flex;
         width: 80%;
@@ -272,29 +280,16 @@
         border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
+        padding: 5px;
         flex-direction: column;
-        padding: 5px;
-
-    }
-
-    .card-C-II,
-    .card-C-III {
-        border: none;
-        display: none;
-        width: 80%;
-        background-color: #ffffff1d;
-        border-radius: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 5px;
     }
 
 
 
 
     .soncard-C-I,
-    #sontexto-C-II,
-    #sontexto-C-III {
+    .soncard-C-II,
+    .soncard-C-III {
         flex-direction: column;
         display: flex;
         padding: 5px;
@@ -309,9 +304,12 @@
     }
 
     /* Conteiner 1 */
-    #btn-C-I {
+    #titulo-dev {
         color: #ffffff;
+        display: flex;
         background: none;
+        align-items: center;
+        justify-content: center;
         font-size: 15px;
         width: 100%;
         border: none;
@@ -343,54 +341,66 @@
 
 
     /* Conteiner 2 */
-    #btn-C-II {
-        border: none;
+    #titulo-soc {
         color: #ffffff;
+        display: flex;
         background: none;
-        width: 40%;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        width: 100%;
+        border: none;
         height: 30px;
         padding: 5px;
+        position: relative;
+        z-index: 0.2;
         border-radius: 10px;
-        margin-left: 220px;
-        margin-top: 15px;
         margin-bottom: 10px;
     }
 
     #bannerSOC {
-        height: 300px;
+        height: 200px;
         opacity: 0.8;
     }
 
     #sontexto-C-II {
+       display: none;
+    }
+
+    #sontexto-C-II-CELL {
         color: #b7b2b2;
         border-width: 100;
         width: 95%;
         margin-left: 12px;
     }
 
-
-
     /* Conteiner 3 */
-    #btn-C-III {
-        border: none;
+    #titulo-graf {
         color: #ffffff;
+        display: flex;
         background: none;
-        width: 30%;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        width: 100%;
+        border: none;
         height: 30px;
         padding: 5px;
+        position: relative;
+        z-index: 0.2;
         border-radius: 10px;
-        margin: auto;
-        margin-top: 15px;
         margin-bottom: 10px;
-        margin-left: 290px;
     }
 
     #bannerDES {
-        height: 300px;
+        height: 200px;
         opacity: 0.8;
     }
 
     #sontexto-C-III {
+       display: none;
+    }
+    #sontexto-C-III-CELL {
         color: #b7b2b2;
         border-width: 100;
         width: 95%;
@@ -872,14 +882,15 @@
 
 
 
-    #sontexto-C-I,
-    #sontexto-C-II,
-    #sontexto-C-III {
+    .soncard-C-I,
+    .soncard-C-II,
+    .soncard-C-III {
         flex-direction: column;
         display: flex;
         padding: 5px;
         text-align: justify;
     }
+
 
     #btn-dev:hover,
     #btn-soc:hover,
@@ -893,6 +904,9 @@
         color: #ffffff;
         background: none;
         font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         border: none;
         height: 30px;
@@ -924,16 +938,20 @@
 
     /* Conteiner 2 */
     #titulo-soc {
-        border: none;
         color: #ffffff;
         background: none;
-        width: 40%;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: none;
         height: 30px;
         padding: 5px;
+        position: relative;
+        z-index: 0.2;
         border-radius: 10px;
-        margin-left: 220px;
-        margin-top: 15px;
-        margin-bottom: 10px;
+        margin-bottom: 60px;
     }
 
     #bannerSOC {
@@ -941,28 +959,36 @@
         opacity: 0.8;
     }
 
+    #sontexto-C-II-CELL {
+        display: none;
+    }
+
     #sontexto-C-II {
         color: #b7b2b2;
+        margin-top: -50px;
         border-width: 100;
         width: 95%;
-        margin-left: 12px;
+        margin-left: 20px;
     }
 
 
 
     /* Conteiner 3 */
     #titulo-graf {
-        border: none;
         color: #ffffff;
         background: none;
-        width: 30%;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: none;
         height: 30px;
         padding: 5px;
+        position: relative;
+        z-index: 0.2;
         border-radius: 10px;
-        margin: auto;
-        margin-top: 15px;
-        margin-bottom: 10px;
-        margin-left: 290px;
+        margin-bottom: 60px;
     }
 
     #bannerDES {
@@ -972,35 +998,11 @@
 
     #sontexto-C-III {
         color: #b7b2b2;
+        margin-top: -50px;
         border-width: 100;
         width: 95%;
-        margin-left: 15px;
+        margin-left: 20px;
     }
-
-
-
-
-
-    #tituloC-II {
-        color: #b7b2b2;
-        margin: auto;
-    }
-
-    #btn-C-IIII {
-        background-color: #b7b2b224;
-        margin: auto;
-        color: #b7b2b2;
-        border: none;
-        padding: 15px;
-        width: 10%;
-    }
-
-    #btn-C-IIII:hover {
-        filter: brightness(70%);
-        cursor: pointer;
-    }
-
-
 
 
 
@@ -1402,11 +1404,6 @@
     .btn-nav-bar-corpo {
         margin-bottom: 20px;
     }
-    
-    .btn-nav-bar-corpo button {
-        transition: opacity 0.5s ease; /* Adiciona uma transição suave de 0.5 segundos para a propriedade de opacidade */
-    }
-    
 
 
     #btn-dev,
@@ -1428,7 +1425,6 @@
         display: none;
         flex-direction: column;
         gap: 30px;
-        transition: opacity 5s ease;
     }
 
     .conteudoC.active {
@@ -1447,8 +1443,6 @@
         margin-right: auto;
         padding: 5px;
     }
-
-
 
 
 
@@ -1527,6 +1521,10 @@
         opacity: 0.8;
     }
 
+    #sontexto-C-II-CELL {
+        display: none;
+    }
+
     #sontexto-C-II {
         color: #b7b2b2;
         margin-top: -50px;
@@ -1561,6 +1559,10 @@
         opacity: 0.8;
     }
 
+    #sontexto-C-III-CELL {
+        display: none;
+    }
+
     #sontexto-C-III {
         color: #b7b2b2;
         margin-top: -50px;
@@ -1570,27 +1572,6 @@
     }
 
 
-
-
-
-    #tituloC-II {
-        color: #b7b2b2;
-        margin: auto;
-    }
-
-    #btn-C-IIII {
-        background-color: #b7b2b224;
-        margin: auto;
-        color: #b7b2b2;
-        border: none;
-        padding: 15px;
-        width: 10%;
-    }
-
-    #btn-C-IIII:hover {
-        filter: brightness(70%);
-        cursor: pointer;
-    }
 
 
 
