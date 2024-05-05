@@ -1271,6 +1271,8 @@ a {
 
 /* CORPO */
 
+
+
 .conteiner-geral {
     align-items: center;
     display: flex;
@@ -1396,6 +1398,7 @@ a {
     margin-bottom: 20px;
 }
 
+
 #btn-dev,
 #btn-soc,
 #btn-des {
@@ -1409,13 +1412,19 @@ a {
     border: 0;
 }
 
+
+
 .conteudoC {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 30px;
 }
 
-.card-C-I {
+.conteudoC.active {
+    display: flex;
+}
+
+.card-C-I{
     border: none;
     display: flex;
     width: 80%;
@@ -1427,10 +1436,21 @@ a {
 
 }
 
-.card-C-II,
+
+.card-C-II{
+    border: none;
+    display: flex;
+    width: 80%;
+    background-color: #ffffff1d;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+
+}
 .card-C-III {
     border: none;
-    display: none;
+    display: flex;
     width: 80%;
     background-color: #ffffff1d;
     border-radius: 10px;
@@ -1459,9 +1479,12 @@ a {
 }
 
 /* Conteiner 1 */
-#btn-C-I {
+#titulo-dev {
     color: #ffffff;
     background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 15px;
     width: 100%;
     border: none;
@@ -1492,17 +1515,18 @@ a {
 
 
 /* Conteiner 2 */
-#btn-C-II {
+#titulo-soc{
     border: none;
     color: #ffffff;
     background: none;
+    display: flex;
     width: 40%;
     height: 30px;
     padding: 5px;
     border-radius: 10px;
     margin-left: 220px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 13px;
+    font-size: 15px;
 }
 
 #bannerSOC {
@@ -1520,18 +1544,22 @@ a {
 
 
 /* Conteiner 3 */
-#btn-C-III {
+#titulo-graf {
     border: none;
     color: #ffffff;
     background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30%;
     height: 30px;
     padding: 5px;
     border-radius: 10px;
+    font-size: 15px;
     margin: auto;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    margin-left: 290px;
+    margin-top: 4px;
+    margin-bottom: 7px;
+    
 }
 
 #bannerDES {

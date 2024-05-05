@@ -112,3 +112,17 @@ function smoothScrollTo(endX, endY, duration) {
     window.scroll(newX, newY);
   }, 1000 / 60);
 }
+
+
+function toggleContent(contentId) {
+  // Esconde todos os conteúdos
+  var contents = document.querySelectorAll('.conteudoC');
+  contents.forEach(function(content) {
+      content.classList.remove('active');
+  });
+
+  // Mostra o conteúdo clicado
+  var contentToShow = document.getElementById(contentId);
+  contentToShow.classList.add('active');
+}
+
