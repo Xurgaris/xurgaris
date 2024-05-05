@@ -1,3 +1,4 @@
+// Menu Hamburger
 function clickMenu(){
     if(menu.style.display == "block"){
         menu.style.display = "none"
@@ -10,6 +11,9 @@ function clickMenu(){
     }
 }
 
+
+
+// Rolamento da página
 const menuLinks = document.querySelectorAll('.main-cabecalho a[href^="#"]');
 
 function getDistanceFromTheTop(element) {
@@ -114,15 +118,19 @@ function smoothScrollTo(endX, endY, duration) {
 }
 
 
-function toggleContent(contentId) {
-  // Esconde todos os conteúdos
+function toggleContent(contentId, button) {
   var contents = document.querySelectorAll('.conteudoC');
   contents.forEach(function(content) {
       content.classList.remove('active');
   });
 
-  // Mostra o conteúdo clicado
+  var buttons = document.querySelectorAll('.btn-nav-bar-corpo button');
+  buttons.forEach(function(btn) {
+      btn.classList.remove('active');
+  });
+
   var contentToShow = document.getElementById(contentId);
   contentToShow.classList.add('active');
-}
 
+  button.classList.add('active');
+}
