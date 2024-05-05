@@ -4,205 +4,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/faviicon.png" type="faviicon">
     <title>Xurgaris</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="estilo/main.css">
-    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/faviicon.png" type="favicon">
 </head>
 
 <body>
+    <!-- CABEÇALHO -->
     <header>
-        <div class="main-cabecalho">
-            <div class="son-one">
-                <div>
-                    <a href="index.html">
-                        <h1 id="xurgaris">Xurgaris</h1>
-                        </a>
-                </div>
-                <div>
 
-                </div>
+        <div class="main-cabecalho">
+
+            <div class="nav-one">
+                <h1 id="xurgaris">
+                    <a href="index.html">
+                        Xurgaris
+                    </a>
+                </h1>
             </div>
 
-
-            <div class="son-three">         
-                
-                <button id="bot">Sobre nós</button>
-
-                <a href="#tituloC-I">
-                    <button id="bot">Serviços</button>
+            <div class="nav-two">
+                <a href="#span-serv">
+                    <button id="nav-button-cabecalho">Serviços</button>
                 </a>
-                <a href="#contato">
-                        <button id="bot">Contato</button>
-                    </a>   
-                 <div class="nav">
-                    <span style="color: #fff;margin-top: 32px;margin-left: -30px;font-size: 40px;" onclick="clickMenu()" class="material-symbols-outlined">
+                <a href="#span-projet">
+                    <button id="nav-button-cabecalho">Projetos</button>
+                </a>
+                <a href="#tituloE-I">
+                    <button id="nav-button-cabecalho">Contato</button>
+                </a>
+
+                <div class="nav">
+                    <span style="color: #fff;margin-top: 10px;margin-left: -40px;font-size: 50px;" onclick="clickMenu()"
+                        class="material-symbols-outlined">
                         segment
-                        </span>
+                    </span>
                     <div id="menu">
                         <ul>
-                            <li style="font-size: 20px;"><a id="itens" href="index.html">Home</a></li>
-                            <li style="font-size: 20px;"><a id="itens" href="#textoB-I">Sobre nós</a></li>
-                            <li style="font-size: 20px;"><a id="itens" href="#textoC-I">Serviços</a></li>
-                            <li style="font-size: 20px;"><a id="itens" href="#contato">Contato</a></li>
+                            <li style="font-size: 20px;margin-left: 50px;"><a id="itens" href="index.html">Home</a></li>
+                            <li style="font-size: 20px;margin-left: 50px;"><a id="itens" href="#span-serv">Serviços</a></li>
+                            <li style="font-size: 20px;margin-left: 50px;"><a id="itens" href="#span-projet">Projetos</a></li>
+                            <li style="font-size: 20px;margin-left: 50px;"><a id="itens" href="#tituloE-I">Contato</a></li>
                         </ul>
                     </div>
-                </div> 
+                </div>
+
             </div>
-        </div>
+
     </header>
 
+    <!-- CORPO -->
+    <div class="conteiner-geral">
+        <img id="bannerA-I" src="img/bg-masthead.jpg" alt="">
 
-    <!-- Corpo -->
-    <div class="container">
-        <div class="conteudo-corpo">
-            <div class="main-A">
-                <img id="primeiro-banner-AA" src="img/cll.png" alt="">
-                <img id="primeiro-banner-AAA" src="img/Developers-tablet.png" alt="">
-                <img id="primeiro-banner-A" src="img/Developers.png" alt="">
-                <!-- <h1 id="titulo-A">Design, código e estratégia: -->
-                    <!-- nosso DNA</h1> -->
-                <a href="#segundo-banner-B">
-                <!-- <button id="bot-saibamais-A">Saiba mais</button> -->
-               </a>
+        <div class="main-A">
+            <div class="sonA-I">
+                <h1 id="tituloA-I">
+                    {<span style="color:#8306e3;"> Desenvolvendo</span> juntos o futuro do seu negócio }
+                </h1>
+                <span id="textoA-I">
+                    Criamos metodologias e ferramentas personalizadas que empoderam empresas e empreendedores no mundo
+                    digital.
+                </span>
+                <a href="#span-serv">
+                    <button id="buttonA-I">Saiba mais</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-B">
+            <div class="sonB-I">
+                <h1>Qualidade</h1>
             </div>
 
-            <div class="main-B">
-                <img id="segundo-banner-B" src="img/site (1).png" alt="">
-                <div class="bodysonB-I">
-                    <h1 id="tituloB-I">Perfil da Empresa</h1>
-                    <p id="textoB-I">
-                        Fundada em 2023, a Xurgaris é uma empresa de serviços completos, oferecendo soluções acessíveis
-                        em Marketing Digital para pessoas e negócios locais e internacionais.
-                    </p>
+            <div class="sonB-II">
+                <h1>Segurança</h1>
+            </div>
+
+            <div class="sonB-III">
+                <h1>Inovação</h1>
+            </div>
+        </div>
+
+        <div class="main-C">
+            <button id="span-serv">Serviços</button>
+            <h1 id="tituloC-I">Do que você precisa?</h1>
+
+            <div class="btn-nav-bar-corpo">
+                <button onclick="toggleContent('card-C-I')" id="btn-dev">Desenvolvimento Web</button>
+                <button onclick="toggleContent('card-C-II')" id="btn-soc">Social Media</button>
+                <button onclick="toggleContent('card-C-III')" id="btn-des">Design Gráfico</button>
+            </div>
+
+            <div class="conteudoC">
+                <div class="card-C-I">
+                    <img id="bannerDEV" src="img/devweb.png" alt="">
+                    <div class="soncard-C-I">
+                        <button id="btn-C-I">Desenvolvimento Web</button>
+                        <span id="sontexto-C-I">
+                            Em um mundo cada vez mais conectado, ter uma presença online eficaz é essencial para
+                            empresas de todos os tamanhos e setores. É aqui que a Xurgaris entra em cena, oferecendo
+                            serviços de desenvolvimento web personalizados para transformar suas ideias em uma realidade
+                            digital impressionante. Nós entendemos que um site não é apenas uma
+                            vitrine digital, mas uma extensão da sua marca e uma ferramenta crucial para engajar e
+                            converter visitantes em clientes. Seja você um empreendedor iniciante ou uma empresa
+                            estabelecida, nossa equipe trabalha em estreita
+                            colaboração com você para entender suas metas, público-alvo e requisitos técnicos, criando
+                            assim um site que seja verdadeiramente personalizado para o seu negócio.
+                        </span>
+                        <span id="sontexto-C-I-CELL">
+                            Em um mundo cada vez mais conectado, ter uma presença online eficaz é essencial para
+                            empresas de todos os tamanhos e setores. É aqui que a Xurgaris entra em cena, oferecendo
+                            serviços de desenvolvimento web personalizados para transformar suas ideias em uma realidade
+                            digital impressionante.
+                    </div>
+                </div>
+
+                <div class="card-C-II">
+                    <div class="soncard-C-II">
+                        <button id="btn-C-II">Social Media</button>
+                        <span id="sontexto-C-II">
+                            No cenário digital atual, as mídias sociais desempenham um papel fundamental na construção e
+                            no crescimento de uma marca. É por isso que oferecemos serviços de gestão de mídias sociais
+                            altamente personalizados. Nossa equipe especializada está aqui para ajudar sua
+                            empresa a aproveitar ao máximo o potencial das plataformas de mídia social para alcançar
+                            seus objetivos de negócios. Começamos entendendo profundamente sua marca, seu público-alvo e
+                            seus objetivos. Com base
+                            nessa compreensão, desenvolvemos uma estratégia personalizada de mídia social que visa
+                            maximizar o engajamento, aumentar a visibilidade da marca e impulsionar o crescimento.
+                        </span>
+                    </div>
+                    <img id="bannerSOC" src="img/socialm.png" alt="">
+
+                </div>
+
+                <div class="card-C-III">
+                    <img id="bannerDES" src="img/designg.png" alt="">
+                    <div class="soncard-C-III" id="soncard-C-III">
+                        <button id="btn-C-III">Design Gráfico</button>
+                        <span id="sontexto-C-III">
+                            Na Xurgaris, entendemos que a aparência é tudo quando se trata de negócios. É por isso que
+                            oferecemos uma gama abrangente de serviços de design gráfico personalizado para ajudar sua
+                            empresa a se destacar e deixar uma impressão duradoura em seus clientes.
+                            Sua marca merece uma identidade visual única que a represente de maneira autêntica. Nossa
+                            equipe de designers talentosos trabalhará em estreita colaboração com você para criar uma
+                            identidade visual coesa e memorável, incluindo logotipos, paletas de cores, tipografia e
+                            elementos gráficos distintivos.
+                        </span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="main-C">
-                <h1 id="tituloC-I">Nossos Serviços</h1>
-                <span id="textoC-I">Nossos serviços abrangem diversas áreas do marketing digital e
-                    desenvolvimento web, garantindo que sua marca se destaque em um mercado competitivo. Conheça alguns
-                    dos serviços que oferecemos:
-                </span>
-                <div class="bodysonC-I">
-                    <div class="bodysonCC-I">
-                        <h3 id="titulos">Desenvolvimento Web</h3>
-                        <span class="material-symbols-outlined">
-                            code
-                        </span>
-                        <p id="textoCC-I">
-                            Transformamos suas ideias em realidade digital, criando sites inovadores
-                            que destacam sua marca.
-                        </p>
-                    </div>
-
-                    <div class="bodysonCC-II">
-                        <h3 id="titulos">Social Media</h3>
-                        <span class="material-symbols-outlined">
-                            filter_hdr
-                        </span>
-
-                        <p id="textoCC-I">
-                            Aumente o engajamento dos seus seguidores com conteúdo criativo e relevante em todas as suas
-                            plataformas de mídia social.
-                        </p>
-                    </div>
-
-                    <div class="bodysonCC-III">
-                        <h3 id="titulos">Design Gráfico</h3>
-                        <span class="material-symbols-outlined">
-                            brush
-                        </span>
-                        <p id="textoCC-I">
-                            Invista em design gráfico de alta qualidade e veja como sua marca se destaca, conquistando a
-                            atenção e a confiança do seu público-alvo.
-                        </p>
-                    </div>
+        <div class="main-D">
+            <button id="span-projet">Projetos</button>
+            <h1 id="span-text-projet">Veja abaixo alguns de nossos projetos</h1>
+            <div class="sonD-I">
+                <div class="project-one">
 
                 </div>
-            </div>
+                <div class="project-two">
 
-            <div class="main-D">
-                <img id="terceiro-banner-C" src="img/resp.png" alt="">
-                <span id="textoD-I">Nossos sites são projetados e desenvolvidos para se adaptarem perfeitamente a
-                    qualquer
-                    tela, seja um desktop, laptop, tablet ou smartphone.</span>
-            </div>
+                </div>
+                <div class="project-three">
 
-            <div class="main-E">
-                <h1 id="tituloE-I">Conectando marcas ao sucesso.</h1>
-                <span id="textoE-I">
-                    Elevamos sua visibilidade e impacto no mercado digital.
-                </span>
-            </div>
+                </div>
+                <div class="project-four">
 
-            <div class="main-F" id="contato">
-                <span class="material-symbols-outlined">
-                    communication
-                </span>
-                <h1 id="tituloF-I">Entre em contato conosco</h1>
-                <div class="bodysonF-I">
-                    <div class="bodysonFFF-II">
-                        <a href="https://wa.link/zbfm9v" target="_blank">
-                            <button id="bot-empresa-FF">Empresa</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main-E">
+            <img id="bannerCEL" src="img/logocel.png" alt="">
+            <h1 id="tituloE-I">Entre em contato conosco pelo WhatsApp</h1>
+
+            <div class="nav-btn-whats">
+                <a href="https://wa.link/cu7t16">
+                    <button id="btn-empresa">
+                        Empresa
+                    </button>
+                </a>
+                <a href="https://wa.link/qx6cqb">
+                    <button id="btn-fisica">
+                        Pessoa Física
+                    </button>
+                </a>
+                
+            </div>
+            <h3 id="text-email">Envie-nos um e-mail</h3>
+            <span id="email">xurgaris@gmail.com</span>
+        </div>
+
+        <div class="main-F">
+            <div class="sonF-I">
+                <h3 id="nav-mapa">Mapa do Site</h3>
+                <ul>
+                    <div>
+                        <a href="index.html">
+                            <li id="nav-fund">Home</li>
                         </a>
-
-                        <a href="https://wa.link/7vkre7" target="_blank">
-                            <button id="bot-pessoafisica-FF">Pessoa Física</button>
+                    </div>
+                    <div>
+                        <a href="#span-serv">
+                            <li id="nav-fund">Serviços</li>
                         </a>
                     </div>
-
-                    <span id="email">Envie-nos um e-mail: xurgaris@gmail.com</span>
-                </div>
+                    <div>
+                        <a href="#span-projet">
+                            <li id="nav-fund">Projetos</li>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#bannerCEL">
+                            <li id="nav-fund">Contato</li>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="paginas/termos.html">
+                            <li id="nav-fund-term">Nossos Termos</li>
+                        </a>
+                    </div>
             </div>
 
-            <div class="main-G">
-                <div class="bodysonG-I">
-                    <ul id="uls" style="color: #fff;">
-                        <div>
-                            <a href="index.html">
-                                <li>Home</li>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#segundo-banner-B">
-                                <li>Sobre nós</li>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#tituloC-I">
-                                <li>Serviços</li>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#contato">
-                                <li>Contato</li>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="paginas/termos.html">
-                                <li>Termos de Contratação de Serviços</li>
-                            </a>
-                        </div>
-                    </ul>
-                </div>
+            <div class="sonF-II">
+                <img id="logosonII-F" src="img/faviicon.png" alt="">
+                <h1 id="xurg-name">Xurgaris</h1>
+                <span id="directos">Todos os direitos reservados</span>
+            </div>
 
-                <div class="bodysonG-II">
-                    <img id="logoG" src="img/faviicon.png" alt="">
-                    <h1 id="tituloGG-II">Xurgaris</h1>
-                    <span id="subtituloGG-I">Todos os Direitos Reservados</span>
-                </div>
-
-
-                <div class="bodysonG-III">
-                    <h1 id="tituloGG-I">Redes Sociais</h1>
-                    <div class="redes">
-                        <img id="instagram" src="img/instagram.png" alt="">
-                        <img id="linkedlin" src="img/linkedlin.png" alt="">
-                        <img id="x" src="img/logo-x.png" alt="">
-                    </div>
+            <div class="sonF-III">
+                <h3 id="redes">Nossas Redes</h3>
+                <div class="son-redes">
+                    <a href="https://www.instagram.com/xurgaris/">
+                        <img id="logo-whats" src="img/instagram.png" alt="">
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/company/xurgaris/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BM95A%2B5y2Ty2ZTLSiRa5gkQ%3D%3D">
+                        <img id="logo-link" src="img/linkedlin.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/xurgaris">
+                        <img id="logo-x" src="img/logo-x.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>
