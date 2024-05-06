@@ -364,7 +364,7 @@
     }
 
     #sontexto-C-II {
-       display: none;
+        display: none;
     }
 
     #sontexto-C-II-CELL {
@@ -398,8 +398,9 @@
     }
 
     #sontexto-C-III {
-       display: none;
+        display: none;
     }
+
     #sontexto-C-III-CELL {
         color: #b7b2b2;
         border-width: 100;
@@ -1570,7 +1571,7 @@
         margin-left: 20px;
     }
 
-    #bot-comunc-C{
+    #bot-comunc-C {
         color: #fff;
     }
 
@@ -1597,7 +1598,7 @@
         width: min-content;
         background-color: #2c2c2c;
         border: 0;
-      
+
     }
 
     #span-text-projet {
@@ -1609,6 +1610,8 @@
         display: flex;
         gap: 10px;
         width: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .project-one,
@@ -1617,11 +1620,41 @@
     .project-four {
         border: solid 1px #b7b2b2;
         width: 290px;
-        height: 200px;
+        height: 300px;
         margin-top: 20px;
+        background-color:#212121;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
     }
 
-    #buttonD-I{
+    
+    .project-one:hover,
+    .project-two:hover,
+    .project-three:hover,
+    .project-four:hover{
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
+    #img-post {
+        height: 170px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #titulos-posts{
+        color: #fff;
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+    #text-posts{
+        color: #d6d3d3;
+        font-size: 9px;
+    }
+    
+
+    #buttonD-I {
         width: 150px;
         border: none;
         color: #fff;
@@ -1633,7 +1666,7 @@
         margin-top: 20px;
     }
 
-    #buttonD-I:hover{
+    #buttonD-I:hover {
         cursor: pointer;
         color: #750bc6;
 
@@ -1649,7 +1682,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 20px;
-        margin-top: 100px;
+        margin-top: 150px;
         color: #b7b2b2;
     }
 

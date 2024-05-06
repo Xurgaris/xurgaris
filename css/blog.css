@@ -8,7 +8,7 @@ body {
 header {
     width: 100%;
     height: auto;
- 
+
     z-index: 1;
 }
 
@@ -17,7 +17,6 @@ header {
     display: flex;
     height: 70px;
     width: 100%;
-    -100px
     position: fixed;
     opacity: 0.8;
 }
@@ -68,23 +67,68 @@ a {
 }
 
 
-.posts-corpo{
-    height: 100vh;
-    width: 100%;
+.conteiner {
+    display: flex;
 }
 
-.pagina-principal{
+
+.div-conteudo {
+    width: 99%;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    margin-top: 200px;
 }
 
-.carrossel{
-    margin-top: 140px;
+.main-A{
+    display: flex;
+    gap: 10px;
+    margin-left: 11px;
 }
 
-#bannerPost1{
-    height: 400px;
+.posts{
+    background-color: #212121;
+    width: 225px;
+    height: auto;
+    margin-top: 100px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts:hover{
+    cursor: pointer;
+    filter: brightness(70%);
+}
+
+#in-posts{
+    height: 140px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#titulos-posts{
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+#text-posts{
+    color: #d6d3d3;
+    font-size: 9px;
+}
+
+#data{
+    color: #ffffff92;
+    font-size: 7px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.main-B{
+    display: flex;
+}
+
+.main-C{
+    display: flex;
 }
