@@ -1657,7 +1657,20 @@
     }
 
     #bot-comunc-C {
+        width: 150px;
+        border: none;
         color: #fff;
+        background-color: #2c2c2c;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+
+    #bot-comunc-C:hover{
+        color: #750bc6;
+        cursor: pointer;
     }
 
 
