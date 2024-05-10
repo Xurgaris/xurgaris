@@ -424,7 +424,7 @@
         margin-top: 20px;
     }
 
-    #btn-C-IIII:hover {
+    #bot-comunc-C:hover {
         filter: brightness(70%);
         cursor: pointer;
     }
@@ -1049,6 +1049,24 @@
         margin-left: 20px;
     }
 
+    #bot-comunc-C {
+        width: 150px;
+        border: none;
+        color: #fff;
+        background-color: #2c2c2c;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+
+    #bot-comunc-C:hover {
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
+
 
 
     .main-D {
@@ -1060,20 +1078,20 @@
         flex-direction: column;
     }
 
-    #span-projet {
+    #span-blog {
         color: #b7b2b2;
         padding: 5px;
         padding-left: 20px;
         padding-right: 20px;
         width: min-content;
         background-color: #2c2c2c;
-        margin-left: 15px;
         border: 0;
     }
 
-    #span-text-projet {
+    #span-text-blog {
         color: #fff;
         font-size: 25px;
+        margin-top: 20px;
     }
 
     .sonD-I {
@@ -1228,6 +1246,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-left: 10px;
     }
 
     #xurg-name {
@@ -1245,13 +1264,13 @@
     }
 
     .sonF-III {
-        width: 30%;
-        height: 100%;
+        width: 25%;
+        height: 70%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
-        margin-top: 30px;
+        margin-top: 72px;
     }
 
     #redes {
@@ -1263,15 +1282,17 @@
 
     .son-redes {
         margin-top: -3px;
-        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
 
     #logo-whats,
     #logo-link,
     #logo-x {
-        height: 40px;
-        margin-right: 10px;
+        height: 35px;
     }
 
     #logo-whats:hover,
