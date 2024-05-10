@@ -275,7 +275,7 @@
     .card-C-III {
         border: none;
         display: flex;
-        width: 80%;
+        width: 85%;
         background-color: #ffffff1d;
         border-radius: 10px;
         margin-left: auto;
@@ -294,6 +294,7 @@
         display: flex;
         padding: 5px;
         text-align: justify;
+        align-items: center;
     }
 
     #btn-dev:hover,
@@ -335,7 +336,6 @@
         margin-top: -50px;
         border-width: 100;
         width: 95%;
-        margin-left: 10px;
     }
 
 
@@ -371,7 +371,7 @@
         color: #b7b2b2;
         border-width: 100;
         width: 95%;
-        margin-left: 12px;
+        align-items: center;
     }
 
     /* Conteiner 3 */
@@ -405,25 +405,23 @@
         color: #b7b2b2;
         border-width: 100;
         width: 95%;
-        margin-left: 15px;
     }
-
-
-
-
 
     #tituloC-II {
         color: #b7b2b2;
         margin: auto;
     }
 
-    #btn-C-IIII {
-        background-color: #b7b2b224;
-        margin: auto;
-        color: #b7b2b2;
+    #bot-comunc-C {
+        width: 150px;
         border: none;
-        padding: 15px;
-        width: 10%;
+        color: #fff;
+        background-color: #2c2c2c;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
     }
 
     #btn-C-IIII:hover {
@@ -444,20 +442,20 @@
         flex-direction: column;
     }
 
-    #span-projet {
+    #span-blog {
         color: #b7b2b2;
         padding: 5px;
         padding-left: 20px;
         padding-right: 20px;
         width: min-content;
         background-color: #2c2c2c;
-        margin-left: 15px;
         border: 0;
     }
 
-    #span-text-projet {
-        color: #fff;
-        font-size: 15px;
+    #span-text-blog {
+        font-size: 25px;
+        color: #ffffff;
+        align-items: center;
     }
 
     .sonD-I {
