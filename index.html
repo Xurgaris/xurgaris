@@ -168,8 +168,8 @@
             </div>
           </div>
           <p class="stats-note">
-            Uma nova agência, construída com mentalidade moderna, foco em qualidade
-            e evolução constante.
+            Uma nova agência, construída com mentalidade moderna, foco em
+            qualidade e evolução constante.
           </p>
         </div>
       </section>
@@ -398,7 +398,15 @@
               rapidamente.
             </p>
 
-          <form class="contact-form" novalidate>
+            <form 
+  name="contact" 
+  method="POST" 
+  data-netlify="true" 
+  netlify-honeypot="bot-field"
+  class="contact-form"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  
   <div class="form-group">
     <input type="text" id="name" name="name" placeholder=" " required />
     <label for="name">Nome</label>
@@ -418,10 +426,7 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Enviar mensagem</button>
-
-  <div class="form-response"></div>
 </form>
-
 
           </div>
         </div>
