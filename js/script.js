@@ -21,64 +21,45 @@ animatedElements.forEach((el) => observer.observe(el));
 // ===============================
 // FORM VALIDATION
 // ===============================
- {
-     const form = document.querySelector('.contact-form');
-const responseDiv = form.querySelector('.form-response');
+const form = document.querySelector(".contact-form");
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+if (form) {
+  const fields = form.querySelectorAll("input, textarea");
 
-  // Limpa mensagens anteriores
-  responseDiv.textContent = '';
-  form.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let isValid = true;
 
-  // Validação básica
-  let valid = true;
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
+    fields.forEach((field) => {
+      const error = field.nextElementSibling;
 
-  if (!name) {
-    form.querySelector('#name + small').style.display = 'block';
-    valid = false;
-  }
+      if (!field.value.trim()) {
+        error.style.display = "block";
+        isValid = false;
+      } else {
+        error.style.display = "none";
+      }
 
-  if (!email || !/\S+@\S+\.\S+/.test(email)) {
-    form.querySelector('#email + small').style.display = 'block';
-    valid = false;
-  }
-
-  if (!message) {
-    form.querySelector('#message + small').style.display = 'block';
-    valid = false;
-  }
-
-  if (!valid) return;
-
-  // Cria objeto FormData para envio
-  const formData = new FormData(form);
-
-  try {
-    const res = await fetch('/', {
-      method: 'POST',
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
+      if (field.type === "email") {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(field.value)) {
+          error.style.display = "block";
+          isValid = false;
+        }
+      }
     });
 
-    if (res.ok) {
-      responseDiv.textContent = "Mensagem enviada com sucesso!";
-      responseDiv.style.color = "green";
+    if (isValid) {
       form.reset();
-    } else {
-      responseDiv.textContent = "Erro ao enviar a mensagem. Tente novamente.";
-      responseDiv.style.color = "red";
+      alert("Mensagem enviada com sucesso! 🚀");
     }
-  } catch (err) {
-    responseDiv.textContent = "Erro ao enviar a mensagem. Tente novamente.";
-    responseDiv.style.color = "red";
-  }
-});
+  });
+}
 
+
+
+
+//ANIMAÇÃO LAYOUT
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 
