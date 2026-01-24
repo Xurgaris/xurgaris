@@ -398,15 +398,17 @@
               rapidamente.
             </p>
 
-            <form 
+           <form 
   name="contact" 
   method="POST" 
   data-netlify="true" 
   netlify-honeypot="bot-field"
   class="contact-form"
 >
+  <!-- Campo oculto anti-spam -->
   <input type="hidden" name="form-name" value="contact" />
-  
+  <input type="text" name="bot-field" style="display:none" />
+
   <div class="form-group">
     <input type="text" id="name" name="name" placeholder=" " required />
     <label for="name">Nome</label>
@@ -426,7 +428,11 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+
+  <!-- Mensagem de feedback -->
+  <div class="form-response"></div>
 </form>
+
 
           </div>
         </div>

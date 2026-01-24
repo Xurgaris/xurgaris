@@ -981,3 +981,14 @@ p {
   display: none;
   margin-top: 5px;
 }
+.contact-form .error {
+  color: #ff4d4f;
+  font-size: 14px;
+  display: none;
+  margin-top: 5px;
+}
+
+.form-response {
+  margin-top: 15px;
+  font-weight: 600;
+}
