@@ -581,166 +581,58 @@ p {
 /* ===============================
    FORMULÁRIO — VERSÃO PREMIUM
 ================================ */
-
+/* ===============================
+   FORMULÁRIO COMPACTO
+================================ */
 .why-form {
-  margin-top: 8rem;
-  padding: 6rem;
+  margin-top: 5rem;
+  padding: 3rem 2.5rem; /* mais compacto */
   background: linear-gradient(160deg, #0f1219, #0b0d12);
-  border-radius: 28px;
+  border-radius: 20px;
   border: 1px solid var(--border);
   position: relative;
   overflow: hidden;
 }
 
-/* Glow de fundo animado */
-.why-form::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top left,
-    rgba(108, 242, 194, 0.12),
-    transparent 60%
-  );
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-
-.why-form:hover::before {
-  opacity: 1;
-}
-
-/* TÍTULO */
-.why-form h3 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-}
-
-.why-form p {
-  max-width: 520px;
-  margin-bottom: 4rem;
-}
-
-/* FORM */
 .contact-form {
   display: grid;
-  gap: 3.2rem;
-  max-width: 520px;
+  gap: 2rem; /* reduz o espaçamento entre campos */
+  max-width: 480px; /* largura menor */
+  margin: 0 auto; /* centraliza o form */
   position: relative;
   z-index: 1;
 }
 
-/* ===============================
-   INPUT FLUTUANTE
-================================ */
-
-.form-group {
-  position: relative;
-}
-
-/* INPUT */
+/* INPUT FLUTUANTE */
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 2rem 1.6rem 1.6rem;
-  border-radius: 14px;
+  padding: 1.6rem 1.4rem; /* reduz padding interno */
+  border-radius: 12px;
   background: rgba(11, 13, 18, 0.6);
   border: 1px solid var(--border);
-  color: var(--text-main);
-  font-size: 1.5rem;
-  transition: border 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  font-size: 1.45rem;
 }
 
 /* LABEL FLUTUANTE */
 .form-group label {
-  position: absolute;
   top: 50%;
-  left: 1.6rem;
-  transform: translateY(-50%);
-  font-size: 1.4rem;
-  color: var(--text-muted);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  background: #0b0d12;
-  padding: 0 0.6rem;
-}
-
-/* FOCO */
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(108, 242, 194, 0.12);
-  background: rgba(11, 13, 18, 0.9);
-}
-
-/* LABEL SOBE */
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label {
-  top: -0.8rem;
-  font-size: 1.2rem;
-  color: var(--primary);
+  left: 1.4rem;
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
 }
 
 /* TEXTAREA */
 .form-group textarea {
-  min-height: 150px;
-  resize: none;
+  min-height: 120px; /* menos alto */
 }
 
-/* ERRO */
-.form-group .error {
-  margin-top: 0.6rem;
-  font-size: 1.2rem;
-  color: #f87171;
-  display: none;
-}
-
-/* ===============================
-   BOTÃO VIVO
-================================ */
-
+/* BOTÃO */
 .contact-form button {
-  margin-top: 2rem;
-  height: 54px;
-  border-radius: 999px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  background: var(--gradient-main);
-  color: #0b0d12;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* brilho animado */
-.contact-form button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.35),
-    transparent
-  );
-  transform: translateX(-100%);
-}
-
-.contact-form button:hover::after {
-  animation: shine 1.2s ease;
-}
-
-.contact-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(108, 242, 194, 0.35);
-}
-
-@keyframes shine {
-  to {
-    transform: translateX(100%);
-  }
+  margin-top: 1.5rem;
+  height: 48px; /* mais compacto */
+  font-size: 1.4rem;
+  padding: 0 2rem;
 }
 
 
