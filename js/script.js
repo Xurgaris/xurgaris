@@ -58,7 +58,6 @@ if (form) {
 
 
 
-
 //ANIMAÇÃO LAYOUT
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
