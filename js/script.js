@@ -8,9 +8,7 @@ const animatedElements = document.querySelectorAll(
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
+      if (entry.isIntersecting) entry.target.classList.add("active");
     });
   },
   { threshold: 0.2 }
@@ -31,7 +29,7 @@ if (menuToggle) {
 }
 
 // ===============================
-// FORM VALIDATION + NETLIFY AJAX SUBMISSION
+// FORM VALIDATION + NETLIFY AJAX
 // ===============================
 const form = document.querySelector(".contact-form");
 
@@ -40,7 +38,7 @@ if (form) {
   const responseDiv = form.querySelector(".form-response");
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // Bloqueia envio padrão
+    e.preventDefault();
 
     let isValid = true;
     responseDiv.textContent = "";
@@ -66,13 +64,15 @@ if (form) {
 
     if (!isValid) return;
 
+    // Prepara dados
     const formData = new FormData(form);
+    formData.append("bot-field", form.querySelector('[name="bot-field"]').value);
 
     try {
       const response = await fetch("/", {
         method: "POST",
-        body: new URLSearchParams(formData).toString(),
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
       });
 
       if (response.ok) {
@@ -83,11 +83,11 @@ if (form) {
       } else {
         throw new Error("Erro ao enviar a mensagem.");
       }
-    } catch (error) {
+    } catch (err) {
       responseDiv.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
       responseDiv.style.color = "red";
       responseDiv.style.opacity = "1";
-      console.error(error);
+      console.error(err);
     }
   });
 }
