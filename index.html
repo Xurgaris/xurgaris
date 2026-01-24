@@ -1,20 +1,441 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- META SEO BÁSICO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xurgaris | Soluções Digitais Inteligentes</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xurgaris</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/faviicon.png" type="faviicon">
-    <meta name="google-site-verification" content="afAWU_uiltCtg-JdiupnlMwvLAinj9oyAb-rUoO6AAo" />
-</head>
+    <meta
+      name="description"
+      content="A Xurgaris é uma agência de soluções digitais focada em performance, design estratégico e crescimento online."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Xurgaris Agência Digital" />
+    <meta name="theme-color" content="#0b0d12" />
 
-<body>
-    <h1 style="color: aliceblue;align-items: center;display: flex;justify-content: center;">Site em Manutenção</h1>
-    <h1 style="color: aliceblue;align-items: center;display: flex;justify-content: center;">Contato: xurgaris@gmail.com</h1>
-</body>
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://www.xurgaris.com/" />
 
+    <!-- OPEN GRAPH -->
+    <meta property="og:site_name" content="Xurgaris" />
+    <meta
+      property="og:title"
+      content="Xurgaris | Soluções Digitais Inteligentes"
+    />
+    <meta
+      property="og:description"
+      content="Criamos soluções digitais modernas focadas em conversão, SEO e crescimento online."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.xurgaris.com/" />
+    <meta property="og:image" content="https://www.xurgaris.com/og-image.jpg" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      as="font"
+      href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SCHEMA.ORG -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "DigitalAgency",
+        "name": "Xurgaris",
+        "url": "https://www.xurgaris.com",
+        "logo": "https://www.xurgaris.com/img/logo-xurgaris.png",
+        "description": "Agência de soluções digitais focada em performance, design estratégico e crescimento online.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BR"
+        },
+        "serviceProvided": [
+          { "@type": "Service", "name": "Web Design" },
+          { "@type": "Service", "name": "Marketing Digital" },
+          { "@type": "Service", "name": "Identidade Visual" }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">
+          <img
+            src="img/logo-xurgaris.png"
+            alt="Xurgaris Agência de Soluções Digitais"
+            width="160"
+            height="40"
+            loading="eager"
+          />
+        </a>
+
+        <nav class="nav" aria-label="Menu principal">
+          <button class="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="menu">
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#processo">Processo</a></li>
+            <li><a href="#contato" class="btn">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="container hero-content">
+          <span class="hero-eyebrow">Agência Digital Estratégica</span>
+
+          <h1 data-animate>
+            Soluções digitais inteligentes para negócios que querem crescer de
+            verdade
+          </h1>
+
+          <p>
+            A Xurgaris cria experiências digitais estratégicas, combinando
+            design, performance e visão de crescimento para marcas que querem se
+            destacar no digital.
+          </p>
+
+          <a
+            href="#contato"
+            class="btn btn-primary"
+            aria-label="Entrar em contato com a Xurgaris"
+          >
+            Falar com um especialista
+          </a>
+        </div>
+      </section>
+      <section class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div>
+              <strong>Estratégia</strong>
+              <span
+                >Projetos pensados para gerar resultado, não apenas
+                estética</span
+              >
+            </div>
+
+            <div>
+              <strong>Design moderno</strong>
+              <span>Layouts atuais, responsivos e focados em conversão</span>
+            </div>
+
+            <div>
+              <strong>Performance</strong>
+              <span>Sites rápidos, leves e otimizados desde o início</span>
+            </div>
+
+            <div>
+              <strong>Transparência</strong>
+              <span
+                >Processo claro, comunicação direta e sem promessas falsas</span
+              >
+            </div>
+          </div>
+          <p class="stats-note">
+            Uma nova agência, construída com mentalidade moderna, foco em qualidade
+            e evolução constante.
+          </p>
+        </div>
+      </section>
+
+      <section class="method" data-animate>
+        <div class="container">
+          <span class="section-tag">Nosso método</span>
+
+          <h2>Processo claro, focado em resultado</h2>
+          <p class="method-subtitle">
+            Cada projeto segue uma estrutura bem definida, garantindo qualidade,
+            alinhamento e evolução constante.
+          </p>
+
+          <div class="method-grid">
+            <article>
+              <span>01</span>
+              <h3>Briefing estratégico</h3>
+              <p>
+                Entendemos seu negócio, objetivos e público para criar uma base
+                sólida antes de qualquer decisão visual.
+              </p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>Design & estrutura</h3>
+              <p>
+                Criamos a identidade visual e a estrutura do site focando em
+                clareza, experiência do usuário e conversão.
+              </p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Desenvolvimento</h3>
+              <p>
+                Transformamos o design em código limpo, rápido e responsivo,
+                seguindo boas práticas desde o início.
+              </p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h3>Entrega & evolução</h3>
+              <p>
+                Publicação, testes finais e acompanhamento para melhorias
+                contínuas conforme seu projeto cresce.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="packages" data-animate></section>
+
+      <!-- SERVIÇOS -->
+      <section id="servicos" class="services" data-animate>
+        <div class="container">
+          <h2>O que fazemos</h2>
+
+          <div class="services-grid">
+            <article>
+              <h3>Web Design Estratégico</h3>
+              <p>
+                Sites modernos, rápidos e pensados para guiar o visitante até a
+                ação certa, com foco em conversão e performance.
+              </p>
+            </article>
+
+            <article>
+              <h3>Marketing Digital</h3>
+              <p>
+                Estratégias digitais inteligentes para atrair, engajar e
+                transformar visitantes em oportunidades reais de negócio.
+              </p>
+            </article>
+
+            <article>
+              <h3>Identidade Visual</h3>
+              <p>
+                Construção de marcas sólidas, coerentes e memoráveis, alinhadas
+                ao posicionamento e aos objetivos do negócio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESSO -->
+      <section id="processo" class="process" data-animate>
+        <div class="container">
+          <h2>Nosso processo de trabalho</h2>
+
+          <div class="process-steps">
+            <div>
+              <h3>Planejamento</h3>
+              <p>Análise estratégica da sua marca, público e objetivos.</p>
+            </div>
+
+            <div>
+              <h3>Criação</h3>
+              <p>Desenvolvimento de soluções digitais sob medida.</p>
+            </div>
+
+            <div>
+              <h3>Lançamento</h3>
+              <p>Publicação, otimização e acompanhamento contínuo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <span class="section-tag">Serviços</span>
+
+        <h2>Soluções pensadas para cada etapa do seu negócio</h2>
+        <p class="packages-subtitle">
+          Escolha o formato ideal para começar ou evoluir sua presença digital.
+        </p>
+
+        <div class="packages-grid">
+          <article class="package">
+            <h3>Presença Digital</h3>
+            <p class="package-desc">
+              Ideal para quem está começando e precisa de um site profissional.
+            </p>
+
+            <ul>
+              <li>Site institucional moderno</li>
+              <li>Design estratégico</li>
+              <li>Responsivo</li>
+              <li>SEO básico</li>
+            </ul>
+
+            <a href="#contato" class="btn btn-outline">Solicitar proposta</a>
+          </article>
+
+          <article class="package featured">
+            <span class="badge">Mais escolhido</span>
+
+            <h3>Crescimento Digital</h3>
+            <p class="package-desc">
+              Para empresas que querem atrair, converter e crescer.
+            </p>
+
+            <ul>
+              <li>Site otimizado para conversão</li>
+              <li>UX estratégico</li>
+              <li>SEO técnico</li>
+              <li>Performance avançada</li>
+            </ul>
+
+            <a href="#contato" class="btn btn-primary">Quero esse</a>
+          </article>
+
+          <article class="package">
+            <h3>Projeto Sob Medida</h3>
+            <p class="package-desc">
+              Soluções personalizadas para necessidades específicas.
+            </p>
+
+            <ul>
+              <li>Estratégia personalizada</li>
+              <li>Design exclusivo</li>
+              <li>Integrações</li>
+              <li>Escalabilidade</li>
+            </ul>
+
+            <a href="#contato" class="btn btn-outline"
+              >Falar com especialista</a
+            >
+          </article>
+        </div>
+      </div>
+
+      <!-- WHY + FORM -->
+      <section class="why" id="contato" data-animate>
+        <div class="container">
+          <h2>Por que escolher a Xurgaris?</h2>
+          <p class="why-subtitle">
+            Não criamos apenas sites. Criamos soluções digitais pensadas para
+            crescer junto com o seu negócio.
+          </p>
+
+          <div class="why-grid">
+            <article>
+              <span>01</span>
+              <h3>Estratégia antes de tudo</h3>
+              <p>
+                Cada projeto nasce de uma análise profunda do seu mercado,
+                público e objetivos reais de negócio.
+              </p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>Design que comunica</h3>
+              <p>
+                Design não é estética vazia. É comunicação clara, moderna e
+                alinhada à sua marca.
+              </p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Performance e SEO</h3>
+              <p>
+                Sites rápidos, bem estruturados e preparados para ranquear no
+                Google desde o primeiro dia.
+              </p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h3>Visão de longo prazo</h3>
+              <p>
+                Criamos soluções escaláveis, prontas para crescer junto com sua
+                empresa.
+              </p>
+            </article>
+          </div>
+
+          <div class="why-form">
+            <h3>Vamos tirar seu projeto do papel?</h3>
+            <p>
+              Preencha o formulário e nossa equipe entrará em contato
+              rapidamente.
+            </p>
+
+          <form class="contact-form" novalidate>
+  <div class="form-group">
+    <input type="text" id="name" name="name" placeholder=" " required />
+    <label for="name">Nome</label>
+    <small class="error">Digite seu nome</small>
+  </div>
+
+  <div class="form-group">
+    <input type="email" id="email" name="email" placeholder=" " required />
+    <label for="email">E-mail</label>
+    <small class="error">Digite um e-mail válido</small>
+  </div>
+
+  <div class="form-group">
+    <textarea id="message" name="message" placeholder=" " required></textarea>
+    <label for="message">Mensagem</label>
+    <small class="error">Digite sua mensagem</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+
+  <div class="form-response"></div>
+</form>
+
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Xurgaris. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
 </html>

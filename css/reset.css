@@ -1,0 +1,60 @@
+/* ===============================
+   RESET GLOBAL + BASE
+================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base de fonte: 1rem = 10px */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Corpo do site */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #eaeaea;
+  background-color: #0b0d12;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mídias */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botões */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Formulários */
+input,
+textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}

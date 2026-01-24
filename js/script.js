@@ -1,137 +1,80 @@
-// Menu Hamburger
-function clickMenu(){
-    if(menu.style.display == "block"){
-        menu.style.display = "none"
-        menu.style.color = "#fff"
-        
+// ===============================
+// SCROLL ANIMATION (IntersectionObserver)
+// ===============================
+const animatedElements = document.querySelectorAll("[data-animate]");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+animatedElements.forEach((el) => observer.observe(el));
+
+// ===============================
+// FORM VALIDATION
+// ===============================
+const form = document.querySelector('.contact-form');
+const responseDiv = form.querySelector('.form-response');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Limpa mensagens anteriores
+  responseDiv.textContent = '';
+  form.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+
+  // Validação básica
+  let valid = true;
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
+
+  if (!name) {
+    form.querySelector('#name + small').style.display = 'block';
+    valid = false;
+  }
+
+  if (!email || !/\S+@\S+\.\S+/.test(email)) {
+    form.querySelector('#email + small').style.display = 'block';
+    valid = false;
+  }
+
+  if (!message) {
+    form.querySelector('#message + small').style.display = 'block';
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  // Envia via fetch
+  const formData = new FormData(form);
+
+  try {
+    const res = await fetch('send-mail.php', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await res.json();
+
+    if (data.status === 'success') {
+      responseDiv.textContent = data.message;
+      responseDiv.style.color = 'green';
+      form.reset();
+    } else {
+      responseDiv.textContent = data.message;
+      responseDiv.style.color = 'red';
     }
-    else{
-        menu.style.display = "block"
-        menu.style.color = "#fff"
-    }
-}
-
-
-
-// Rolamento da página
-const menuLinks = document.querySelectorAll('.main-cabecalho a[href^="#"]');
-
-function getDistanceFromTheTop(element) {
-  const id = element.getAttribute("href");
-  return document.querySelector(id).offsetTop;
-}
-
-function nativeScroll(distanceFromTheTop) {
-  window.scroll({
-    top: distanceFromTheTop,
-    behavior: "smooth",
-  });
- }
-
-function scrollToSection(event) {
-  event.preventDefault();
-  const distanceFromTheTop = getDistanceFromTheTop(event.currentTarget) - 90;
-  smoothScrollTo(0, distanceFromTheTop);
-}
-
-menuLinks.forEach((link) => {
-  link.addEventListener("click", scrollToSection);
+  } catch (err) {
+    responseDiv.textContent = 'Erro ao enviar a mensagem. Tente novamente.';
+    responseDiv.style.color = 'red';
+  }
 });
-
-function smoothScrollTo(endX, endY, duration) {
-  const startX = window.scrollX || window.pageXOffset;
-  const startY = window.scrollY || window.pageYOffset;
-  const distanceX = endX - startX;
-  const distanceY = endY - startY;
-  const startTime = new Date().getTime();
-
-  duration = typeof duration !== "undefined" ? duration : 400;
-
-  const easeInOutQuart = (time, from, distance, duration) => {
-    if ((time /= duration / 2) < 1)
-      return (distance / 2
-    ) * time * time * time * time + from;
-    return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
-  };
-
-  const timer = setInterval(() => {
-    const time = new Date().getTime() - startTime;
-    const newX = easeInOutQuart(time, startX, distanceX, duration);
-    const newY = easeInOutQuart(time, startY, distanceY, duration);
-    if (time >= duration) {
-      clearInterval(timer);
-    }
-    window.scroll(newX, newY);
-  }, 1000 / 60);
-}
-
-
-
-
-const menLinks = document.querySelectorAll('.main-A a[href^="#"]');
-
-function getDistanceFromTheTop(element) {
-  const id = element.getAttribute("href");
-  return document.querySelector(id).offsetTop;
-}
-
-function nativeScroll(distanceFromTheTop) {
-  window.scroll({
-    top: distanceFromTheTop,
-    behavior: "smooth",
-  });
- }
-
-function scrollToSection(event) {
-  event.preventDefault();
-  const distanceFromTheTop = getDistanceFromTheTop(event.currentTarget) - 90;
-  smoothScrollTo(0, distanceFromTheTop);
-}
-
-menLinks.forEach((link) => {
-  link.addEventListener("click", scrollToSection);
-});
-
-function smoothScrollTo(endX, endY, duration) {
-  const startX = window.scrollX || window.pageXOffset;
-  const startY = window.scrollY || window.pageYOffset;
-  const distanceX = endX - startX;
-  const distanceY = endY - startY;
-  const startTime = new Date().getTime();
-
-  duration = typeof duration !== "undefined" ? duration : 400;
-
-  const easeInOutQuart = (time, from, distance, duration) => {
-    if ((time /= duration / 2) < 1)
-      return (distance / 2) * time * time * time * time + from;
-    return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
-  };
-
-  const timer = setInterval(() => {
-    const time = new Date().getTime() - startTime;
-    const newX = easeInOutQuart(time, startX, distanceX, duration);
-    const newY = easeInOutQuart(time, startY, distanceY, duration);
-    if (time >= duration) {
-      clearInterval(timer);
-    }
-    window.scroll(newX, newY);
-  }, 1000 / 60);
-}
-
-
-function toggleContent(contentId, button) {
-  var contents = document.querySelectorAll('.conteudoC');
-  contents.forEach(function(content) {
-      content.classList.remove('active');
-  });
-
-  var buttons = document.querySelectorAll('.btn-nav-bar-corpo button');
-  buttons.forEach(function(btn) {
-      btn.classList.remove('active');
-  });
-
-  var contentToShow = document.getElementById(contentId);
-  contentToShow.classList.add('active');
-
-  button.classList.add('active');
-}
