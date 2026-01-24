@@ -27,4 +27,20 @@ if (menuToggle) {
     menu.classList.toggle("active");
   });
 }
-;
+;fil
+
+
+
+const fields = document.querySelectorAll(".contact-form input, .contact-form textarea");
+
+fields.forEach((field) => {
+  // Atualiza classe filled ao digitar
+  field.addEventListener("input", () => {
+    if (field.value.trim() !== "") {
+      field.classList.add("filled");
+    } else {
+      field.classList.remove("filled");
+    }
+  });
+});
+
