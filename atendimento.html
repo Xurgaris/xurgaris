@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central de Atendimento Premium | Xurgaris</title>
+
+<style>
+:root {
+  --primary: #6cf2c2;
+  --bg-dark: #0b0d12;
+  --bg-gradient: linear-gradient(160deg,#0f1219,#0b0d12);
+  --text-main: #eaeaea;
+  --text-muted: #a1a1aa;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter',sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:0 2rem;
+}
+.container {
+  max-width:600px;
+  width:100%;
+  background: rgba(11,13,18,0.95);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:4rem 3rem;
+  text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,0.6);
+  animation:fadeUp 1s ease forwards;
+  opacity:0;
+}
+.logo img { height:60px; width:auto; margin-bottom:2rem; }
+
+h1 { font-size:2.8rem; font-weight:900; line-height:1.2; margin-bottom:1rem; }
+p { font-size:1.4rem; color:var(--text-muted); margin-bottom:2rem; line-height:1.5; }
+
+/* FORMULÁRIO PREMIUM */
+.form-group { position:relative; margin-bottom:1.8rem; }
+.form-group input { 
+  width:100%; padding:1.2rem 1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.08); 
+  background: rgba(11,13,18,0.6); color:var(--text-main); font-size:1.25rem; transition:0.3s;
+}
+.form-group label { 
+  position:absolute; top:50%; left:1rem; transform:translateY(-50%);
+  color: var(--text-muted); font-size:1.1rem; pointer-events:none; transition:0.3s;
+}
+.form-group input:focus + label,
+.form-group input.filled + label {
+  top:-0.7rem; font-size:1rem; color: var(--primary);
+}
+
+/* BOTÃO */
+.btn-primary {
+  padding:1.4rem 2.8rem;
+  border-radius:999px;
+  font-weight:700;
+  font-size:1.3rem;
+  color: var(--bg-dark);
+  background: var(--primary);
+  text-decoration:none;
+  display:inline-block;
+  position:relative;
+  overflow:hidden;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 15px 40px rgba(108,242,194,0.45); }
+.btn-primary::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.35),transparent);
+  transform:translateX(-100%);
+}
+.btn-primary:hover::after { animation:shine 1.2s ease forwards; }
+
+/* ANIMAÇÕES */
+@keyframes fadeUp { from{opacity:0;transform:translateY(30px);} to{opacity:1;transform:translateY(0);} }
+@keyframes shine { to{transform:translateX(100%);} }
+
+@media(max-width:768px){
+  h1{font-size:2rem;}
+  p{font-size:1.25rem;}
+  .btn-primary{font-size:1.2rem;padding:1.2rem 2rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="logo">
+    <img src="img/logo-xurgaris.png" alt="Xurgaris Agência Digital">
+  </div>
+
+  <h1>Central de Atendimento Premium</h1>
+  <p>Preencha os dados abaixo e seja direcionado automaticamente para nosso WhatsApp</p>
+
+  <form id="formAtendimento">
+    <div class="form-group">
+      <input type="text" id="nome" name="nome" placeholder=" " required>
+      <label for="nome">Nome</label>
+    </div>
+
+    <div class="form-group">
+      <input type="email" id="email" name="email" placeholder=" " required>
+      <label for="email">E-mail</label>
+    </div>
+
+    <!-- Tipo de atendimento oculto, vindo da URL -->
+    <input type="hidden" id="tipo" name="tipo">
+    
+    <button type="submit" class="btn-primary">Abrir WhatsApp</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('formAtendimento');
+  const phone = '5511999999999'; // substitua pelo seu número
+
+  // Pega parâmetro da URL ?tipo=
+  const urlParams = new URLSearchParams(window.location.search);
+  const tipoParam = urlParams.get('tipo');
+  const tipoInput = document.getElementById('tipo');
+  tipoInput.value = tipoParam || '';
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const tipo = tipoInput.value;
+
+    let texto = `Olá, meu nome é ${nome} (${email}).`;
+    if(tipo === 'proposta') texto += ' Gostaria de solicitar uma proposta.';
+    if(tipo === 'quero') texto += ' Quero esse pacote de serviços.';
+    if(tipo === 'especialista') texto += ' Quero falar com um especialista.';
+
+    const waLink = `https://wa.me/${phone}?text=${encodeURIComponent(texto)}`;
+    
+    // Abre o WhatsApp em nova aba
+    window.open(waLink, '_blank');
+  });
+
+  // Label flutuante para inputs
+  const inputs = document.querySelectorAll('input');
+  inputs.forEach(inp => {
+    inp.addEventListener('input', () => {
+      if(inp.value) inp.classList.add('filled');
+      else inp.classList.remove('filled');
+    });
+  });
+</script>
+
+</body>
+</html>

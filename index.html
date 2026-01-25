@@ -32,9 +32,10 @@
     <meta property="og:image" content="https://www.xurgaris.com/og-image.jpg" />
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="icon" type="image/png" href="img/minilogo-xurgaris.png" />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/loading.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -78,14 +79,18 @@
   </head>
 
   <body>
+    <!-- LOADER -->
+  <div id="loading-screen">
+    <img src="img/logo-xurgaris.png" alt="Xurgaris" class="loading-logo">
+    <span class="loading-text">Carregando...</span>
+  </div>
+
     <!-- HEADER -->
     <header class="header">
       <div class="container">
         <a href="/" class="logo">
           <img
-            src="img/logo-xurgaris.png"
-            alt="Xurgaris Agência de Soluções Digitais"
-            width="160"
+            src="img/logo-xurgaris.png" alt="Xurgaris Agência de Soluções Digitais" width="160"
             height="40"
             loading="eager"
           />
@@ -223,7 +228,6 @@
           </div>
         </div>
       </section>
-      <section class="packages" data-animate></section>
 
       <!-- SERVIÇOS -->
       <section id="servicos" class="services" data-animate>
@@ -303,7 +307,12 @@
               <li>SEO básico</li>
             </ul>
 
-            <a href="#contato" class="btn btn-outline">Solicitar proposta</a>
+            <a
+              href="atendimento.html?tipo=proposta"
+              target="_blank"
+              class="btn btn-outline"
+              >Solicitar proposta</a
+            >
           </article>
 
           <article class="package featured">
@@ -321,7 +330,12 @@
               <li>Performance avançada</li>
             </ul>
 
-            <a href="" class="btn btn-primary">Quero esse</a>
+            <a
+              href="atendimento.html?tipo=quero"
+              target="_blank"
+              class="btn btn-primary"
+              >Quero esse</a
+            >
           </article>
 
           <article class="package">
@@ -337,7 +351,10 @@
               <li>Escalabilidade</li>
             </ul>
 
-            <a href="#contato-div" class="btn btn-outline"
+            <a
+              href="atendimento.html?tipo=especialista"
+              target="_blank"
+              class="btn btn-outline"
               >Falar com especialista</a
             >
           </article>
@@ -390,7 +407,7 @@
               </p>
             </article>
           </div>
-          
+
           <div class="why-form" id="why-form">
             <h3>Vamos tirar seu projeto do papel?</h3>
             <p>
@@ -398,35 +415,57 @@
               rapidamente.
             </p>
 
-           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-  <!-- Campo oculto anti-spam -->
-  <input type="hidden" name="form-name" value="contact" />
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <!-- Campo oculto anti-spam -->
+              <input type="hidden" name="form-name" value="contact" />
 
-  <div class="form-group">
-    <input type="text" id="name" name="name" placeholder=" " required />
-    <label for="name">Nome</label>
-    <small class="error">Digite seu nome</small>
-  </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder=" "
+                  required
+                />
+                <label for="name">Nome</label>
+                <small class="error">Digite seu nome</small>
+              </div>
 
-  <div class="form-group">
-    <input type="email" id="email" name="email" placeholder=" " required />
-    <label for="email">E-mail</label>
-    <small class="error">Digite um e-mail válido</small>
-  </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder=" "
+                  required
+                />
+                <label for="email">E-mail</label>
+                <small class="error">Digite um e-mail válido</small>
+              </div>
 
-  <div class="form-group">
-    <textarea id="message" name="message" placeholder=" " required></textarea>
-    <label for="message">Mensagem</label>
-    <small class="error">Digite sua mensagem</small>
-  </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder=" "
+                  required
+                ></textarea>
+                <label for="message">Mensagem</label>
+                <small class="error">Digite sua mensagem</small>
+              </div>
 
-  <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+              <button type="submit" class="btn btn-primary">
+                Enviar mensagem
+              </button>
 
-  <!-- Mensagem de feedback -->
-  <div class="form-response"></div>
-</form>
-
-
+              <!-- Mensagem de feedback -->
+              <div class="form-response"></div>
+            </form>
           </div>
         </div>
       </section>
@@ -440,6 +479,7 @@
     </footer>
 
     <!-- JS -->
+    <script src="js/loading.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

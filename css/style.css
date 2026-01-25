@@ -1,5 +1,8 @@
+
+
 /* ===============================
-   DESIGN SYSTEM
+   DESIGN SYSTEM (VARIÁVEIS GLOBAIS)
+   - Definido para cores, gradientes, tipografia base
 ================================ */
 :root {
   --primary: #6cf2c2;
@@ -18,9 +21,10 @@
 
 /* ===============================
    BASE
+   - Aplica estilo global ao body e tipografia padrão
 ================================ */
 body {
-  padding-top: 80px; /* header fixo */
+  padding-top: 80px; /* Espaço para header fixo */
   background: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.6;
@@ -28,6 +32,7 @@ body {
 
 /* ===============================
    CONTAINER & SECTIONS
+   - Containers centrais e padding de seções
 ================================ */
 .container {
   width: 100%;
@@ -43,6 +48,7 @@ section {
 
 /* ===============================
    TIPOGRAFIA
+   - H1, H2, H3, parágrafos
 ================================ */
 h1,
 h2,
@@ -68,6 +74,7 @@ p {
 
 /* ===============================
    HEADER
+   - Logo, navegação e menu fixo
 ================================ */
 .header {
   position: fixed;
@@ -78,6 +85,7 @@ p {
   border-bottom: 1px solid var(--border);
   z-index: 1000;
 }
+
 .header .container {
   height: 80px;
   display: flex;
@@ -85,29 +93,26 @@ p {
   justify-content: space-between;
 }
 
-
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
   height: 100%;
-}
-.logo img {
-  height: 42px; /* tamanho ideal para header de 80px */
-  width: auto;
-  display: block;
-}
-.logo {
   padding: 0.4rem 0;
 }
 
+.logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
 
-
+/* Navegação */
 .nav ul {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
-
 
 .nav a {
   display: inline-flex;
@@ -125,13 +130,13 @@ p {
   transition: color 0.3s, background 0.3s;
 }
 
-
 .nav a:hover {
   color: var(--primary);
 }
 
 /* ===============================
    BOTÕES
+   - Estilos para todos os botões (.btn)
 ================================ */
 .btn {
   padding: 1.4rem 3.2rem;
@@ -143,12 +148,34 @@ p {
   justify-content: center;
 }
 
+/* Botão principal */
 .btn-primary {
   background: var(--gradient-main);
   color: #0b0d12;
   border: none;
+  position: relative;
+  overflow: hidden;
 }
 
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.btn-primary:hover::after {
+  transform: translateX(100%);
+  transition: transform 0.8s ease;
+}
+
+/* Botão dentro da navegação */
 .nav .btn {
   background: transparent;
   border: 1px solid var(--border);
@@ -158,10 +185,9 @@ p {
   border-color: var(--primary);
 }
 
-
-
 /* ===============================
    HERO
+   - Primeira seção, linhas animadas, título e CTA
 ================================ */
 .hero {
   min-height: calc(100vh - 80px);
@@ -185,24 +211,9 @@ p {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 900px; /* MAIS RESPIRO */
+  max-width: 900px;
 }
 
-
-.hero h1 {
-  font-size: clamp(4.2rem, 6vw, 6.2rem);
-  line-height: 1.1;
-}
-
-
-.hero p {
-  margin: 3rem 0 4.5rem;
-  font-size: 1.9rem;
-}
-
-/* ===============================
-   HERO – TITULO DE IMPACTO
-================================ */
 .hero h1 {
   font-size: clamp(4.2rem, 6vw, 6.2rem);
   line-height: 1.05;
@@ -212,7 +223,10 @@ p {
 
 .hero p {
   max-width: 560px;
+  margin: 3rem 0 4.5rem;
+  font-size: 1.9rem;
 }
+
 .hero-eyebrow {
   display: inline-block;
   margin-bottom: 1.6rem;
@@ -222,15 +236,11 @@ p {
   color: var(--primary);
   opacity: 0.9;
 }
+
+/* Hero Animations */
 @keyframes heroFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-eyebrow,
@@ -244,9 +254,6 @@ p {
 .hero h1 { animation-delay: 0.15s; }
 .hero p { animation-delay: 0.3s; }
 .hero .btn { animation-delay: 0.45s; }
-.hero .btn-primary {
-  position: relative;
-}
 
 .hero .btn-primary::after {
   content: "";
@@ -259,20 +266,32 @@ p {
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  70% {
-    transform: scale(1.15);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { transform: scale(1); opacity: 0.5; }
+  70% { transform: scale(1.15); opacity: 0; }
+  100% { opacity: 0; }
 }
+
+/* Linhas de fundo do hero */
+.lines {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.lines span {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(transparent, var(--primary), transparent);
+  opacity: 0.15;
+}
+
+.lines span:nth-child(1) { left: 20%; }
+.lines span:nth-child(2) { left: 50%; }
+.lines span:nth-child(3) { left: 80%; }
+
 /* ===============================
-   PROVA SOCIAL – NÚMEROS
+   PROVA SOCIAL – STATS
 ================================ */
 .stats {
   padding: 6rem 0;
@@ -309,6 +328,7 @@ p {
   font-size: 1.5rem;
   color: var(--text-muted);
 }
+
 .stats-grid div {
   opacity: 0;
   transform: translateY(30px);
@@ -322,6 +342,7 @@ p {
 
 /* ===============================
    MÉTODO
+   - Seção "Nosso método" com grid de artigos
 ================================ */
 .method {
   background: radial-gradient(
@@ -401,8 +422,10 @@ p {
   font-size: 1.5rem;
   color: var(--text-muted);
 }
+
 /* ===============================
    PACOTES DE SERVIÇO
+   - Seção "Packages" com cards de serviços
 ================================ */
 .packages {
   background: linear-gradient(
@@ -489,31 +512,9 @@ p {
   font-weight: 700;
 }
 
-
-
-/* ===============================
-   LINHAS ANIMADAS
-================================ */
-.lines {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.lines span {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(transparent, var(--primary), transparent);
-  opacity: 0.15;
-}
-
-.lines span:nth-child(1) { left: 20%; }
-.lines span:nth-child(2) { left: 50%; }
-.lines span:nth-child(3) { left: 80%; }
-
 /* ===============================
    SERVICES
+   - Seção "O que fazemos", grid de artigos
 ================================ */
 .services-grid {
   display: grid;
@@ -533,25 +534,103 @@ p {
 .services article:hover {
   transform: translateY(-8px);
   border-color: var(--primary);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
 }
+
+/* Serviços - animação inicial */
+.services article {
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.services article.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Cascata de animação */
+.services article:nth-child(1) { transition-delay: 0.1s; }
+.services article:nth-child(2) { transition-delay: 0.25s; }
+.services article:nth-child(3) { transition-delay: 0.4s; }
 
 /* ===============================
    PROCESSO
+   - Timeline vertical de etapas
 ================================ */
+.process {
+  position: relative;
+}
+
 .process-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 4rem;
   margin-top: 5rem;
+  position: relative;
+  padding-left: 3rem;
 }
 
+/* Linha vertical do processo */
+.process-steps::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--primary),
+    transparent
+  );
+  opacity: 0.3;
+}
+
+/* Cada etapa */
 .process-steps div {
+  position: relative;
   padding-left: 2rem;
   border-left: 3px solid var(--primary);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Bolinha da etapa */
+.process-steps div::before {
+  content: "";
+  position: absolute;
+  left: -3.1rem;
+  top: 1rem;
+  width: 14px;
+  height: 14px;
+  background: var(--bg-dark);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+
+/* Etapa ativa */
+.process-steps div.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.process-steps div.active::before {
+  background: var(--primary);
+  transform: scale(1.2);
+}
+
+/* Cascata */
+.process-steps div:nth-child(1) { transition-delay: 0.1s; }
+.process-steps div:nth-child(2) { transition-delay: 0.25s; }
+.process-steps div:nth-child(3) { transition-delay: 0.4s; }
+
 /* ===============================
-   WHY XURGARIS
+   WHY + FORM
+   - Seção "Por que escolher a Xurgaris" e formulário premium
 ================================ */
 .why-subtitle {
   max-width: 640px;
@@ -578,12 +657,10 @@ p {
   display: block;
 }
 
-/* ===============================
-   FORMULÁRIO PREMIUM RESPONSIVO
-================================ */
+/* FORMULÁRIO PREMIUM */
 .why-form {
   margin-top: 5rem;
-  padding: 3rem 2.5rem; /* mais compacto */
+  padding: 3rem 2.5rem;
   background: linear-gradient(160deg, #0f1219, #0b0d12);
   border-radius: 20px;
   border: 1px solid var(--border);
@@ -617,7 +694,8 @@ p {
 }
 
 /* ===============================
-   FORMULÁRIO
+   FORMULÁRIO (CONTACT FORM)
+   - Inputs flutuantes, labels, textarea, erros, botão
 ================================ */
 .contact-form {
   display: grid;
@@ -628,9 +706,9 @@ p {
   z-index: 1;
 }
 
-/* INPUT FLUTUANTE */
 .form-group {
   position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .form-group input,
@@ -645,9 +723,8 @@ p {
   transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* LABEL FLUTUANTE */
 .form-group label {
-  position: absolute;
+ position: absolute;
   top: 50%;
   left: 1.2rem;
   transform: translateY(-50%);
@@ -655,48 +732,39 @@ p {
   color: var(--text-muted);
   pointer-events: none;
   transition: all 0.3s ease;
-
-  padding: 0 0.5rem;
+  z-index: 2; /* label acima do input */
+  background: transparent;
+  padding: 0 0.3rem;
 }
 
-/* LABEL SOBE SOMENTE NO FOCO */
+/* LABEL SOBE PARA CIMA – “NO VAZIO” */
 .form-group input:focus + label,
-.form-group textarea:focus + label {
-  top: -0.7rem;
-  font-size: 1.1rem;
-  color: var(--primary);
-}
-
-/* LABEL SOBE SE TEM VALOR (JS adiciona class "filled") */
+.form-group textarea:focus + label,
 .form-group input.filled + label,
-.form-group textarea.filled + label {
-  top: -0.7rem;
-  font-size: 1.1rem;
-  color: var(--primary);
-}
-
+.form-group textarea.filled + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:not(:placeholder-shown) + label {
-  top: -0.7rem;
-  font-size: 1.1rem;
+  top: -2rem; /* sobe acima do input */
+  transform: translateY(0) scale(0.85); /* mantém menor e fora do campo */
+  font-size: 1.3rem;
   color: var(--primary);
+  padding: 0 0.4rem;
+  z-index: 3;
 }
 
-/* TEXTAREA */
+
 .form-group textarea {
   min-height: 120px;
   resize: none;
 }
 
-/* ERRO */
 .form-group .error {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: #f87171;
+  color: #ff4d4f;
+  font-size: 14px;
   display: none;
+  margin-top: 5px;
 }
 
-/* BOTÃO */
 .contact-form button {
   margin-top: 1.5rem;
   height: 48px;
@@ -710,7 +778,6 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* brilho animado */
 .contact-form button::after {
   content: "";
   position: absolute;
@@ -729,57 +796,13 @@ p {
 }
 
 @keyframes shine {
-  to {
-    transform: translateX(100%);
-  }
+  to { transform: translateX(100%); }
 }
 
-/* MENSAGEM DE FEEDBACK */
 .form-response {
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: 600;
-  font-size: 1.25rem;
-  text-align: center;
 }
-
-/* ===============================
-   RESPONSIVO
-================================ */
-@media (max-width: 768px) {
-  .why-form {
-    padding: 2.5rem 1.8rem;
-  }
-
-  .why-form h3 {
-    font-size: 1.9rem;
-  }
-
-  .why-form p {
-    font-size: 1.35rem;
-  }
-
-  .contact-form {
-    max-width: 100%;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 1.35rem;
-    padding: 1.2rem 1rem;
-  }
-
-  .form-group label {
-    font-size: 1.15rem;
-    left: 1rem;
-  }
-
-  .contact-form button {
-    height: 44px;
-    font-size: 1.3rem;
-  }
-}
-
-
 
 /* ===============================
    FOOTER
@@ -793,7 +816,84 @@ p {
 }
 
 /* ===============================
-   ANIMAÇÕES
+   RESPONSIVO
+   - Ajustes mobile até 768px
+================================ */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero {
+    padding: 6rem 0;
+    min-height: calc(100vh - 80px);
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: left;
+  }
+  .hero h1 {
+    font-size: clamp(3.2rem, 8vw, 4.2rem);
+    line-height: 1.15;
+  }
+  .hero p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+  }
+  .hero .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Formulário */
+  .why-form {
+    padding: 2.5rem 1.8rem;
+  }
+  .why-form h3 { font-size: 1.9rem; }
+  .why-form p { font-size: 1.35rem; }
+  .contact-form {
+    max-width: 100%;
+  }
+  .form-group input,
+  .form-group textarea {
+    font-size: 1.35rem;
+    padding: 1.2rem 1rem;
+  }
+  .form-group label {
+    font-size: 1.15rem;
+    left: 1rem;
+  }
+  .contact-form button {
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  /* Menu Mobile */
+  .menu-toggle { display: flex; }
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 13, 18, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+  .menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav ul li a { font-size: 1.8rem; }
+}
+
+/* ===============================
+   ANIMAÇÕES GERAIS
 ================================ */
 [data-animate] {
   opacity: 0;
@@ -804,227 +904,4 @@ p {
 [data-animate].active {
   opacity: 1;
   transform: translateY(0);
-}
-/* ===============================
-   MENU MOBILE
-================================ */
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.menu-toggle span {
-  width: 26px;
-  height: 2px;
-  background: var(--text-main);
-  transition: all 0.3s ease;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .menu {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: rgba(11, 13, 18, 0.98);
-    backdrop-filter: blur(12px);
-
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
-
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
-  }
-
-  .menu.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav ul li a {
-    font-size: 1.8rem;
-  }
-}
-
-/* ===============================
-   HERO MOBILE
-================================ */
-@media (max-width: 768px) {
-  .hero {
-    padding: 6rem 0;
-    min-height: calc(100vh - 80px);
-  }
-
-  .hero-content {
-    max-width: 100%;
-    text-align: left;
-  }
-
-  .hero h1 {
-    font-size: clamp(3.2rem, 8vw, 4.2rem);
-    line-height: 1.15;
-  }
-
-  .hero p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-  }
-
-  .hero .btn {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-.btn-primary {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-  transform: translateX(-100%);
-}
-
-.btn-primary:hover::after {
-  transform: translateX(100%);
-  transition: transform 0.8s ease;
-}
-/* ===============================
-   SERVICES – ANIMAÇÃO PREMIUM
-================================ */
-.services article {
-  opacity: 0;
-  transform: translateY(40px) scale(0.96);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
-}
-
-/* Quando ativado pelo JS */
-.services article.active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* Delay em cascata */
-.services article:nth-child(1) { transition-delay: 0.1s; }
-.services article:nth-child(2) { transition-delay: 0.25s; }
-.services article:nth-child(3) { transition-delay: 0.4s; }
-.services article:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: var(--primary);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
-}
-/* ===============================
-   PROCESSO – STORYTELLING VISUAL
-================================ */
-.process {
-  position: relative;
-}
-
-.process-steps {
-  position: relative;
-  padding-left: 3rem;
-}
-
-/* Linha vertical */
-.process-steps::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--primary),
-    transparent
-  );
-  opacity: 0.3;
-}
-
-/* Etapas */
-.process-steps div {
-  position: relative;
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
-}
-
-/* Bolinha da etapa */
-.process-steps div::before {
-  content: "";
-  position: absolute;
-  left: -3.1rem;
-  top: 1rem;
-  width: 14px;
-  height: 14px;
-  background: var(--bg-dark);
-  border: 2px solid var(--primary);
-  border-radius: 50%;
-  transition: background 0.4s ease, transform 0.4s ease;
-}
-
-/* Etapa ativa */
-.process-steps div.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.process-steps div.active::before {
-  background: var(--primary);
-  transform: scale(1.2);
-}
-
-/* Cascata */
-.process-steps div:nth-child(1) { transition-delay: 0.1s; }
-.process-steps div:nth-child(2) { transition-delay: 0.25s; }
-.process-steps div:nth-child(3) { transition-delay: 0.4s; }
-
-.form-response {
-  margin-top: 15px;
-  font-weight: 600;
-}
-
-.contact-form .error {
-  color: #ff4d4f;
-  font-size: 14px;
-  display: none;
-  margin-top: 5px;
-}
-.contact-form .error {
-  color: #ff4d4f;
-  font-size: 14px;
-  display: none;
-  margin-top: 5px;
-}
-
-.form-response {
-  margin-top: 15px;
-  font-weight: 600;
 }
