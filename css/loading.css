@@ -1,7 +1,8 @@
+/* LOADER PREMIUM */
 #loading-screen {
   position: fixed;
   inset: 0;
-  background-color: #0b0d12;
+  background-color: #0b0d12; /* fundo dark premium */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,25 +13,27 @@
 }
 
 .loading-logo {
-  width: 120px;
+  width: 120px; /* tamanho ideal */
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
   animation: logoPulse 1.5s infinite;
 }
 
 .loading-text {
-  color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
   animation: textPulse 1.5s infinite;
 }
 
+/* animações */
 @keyframes logoPulse {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.15); opacity: 0.7; }
 }
 
 @keyframes textPulse {
-  0%, 100% { opacity:1; }
-  50% { opacity:0.5; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }

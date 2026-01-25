@@ -1,21 +1,13 @@
-   (function() {
-      const loader = document.getElementById('loading-screen');
+// Espera o site carregar totalmente
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loading-screen');
+  if (!loader) return;
 
-      // Função para remover loader
-      function hideLoader() {
-        if (!loader) return;
-        loader.style.transition = 'opacity 0.5s ease';
-        loader.style.opacity = '0';
-        setTimeout(() => loader.remove(), 500);
-      }
+  // Desaparece suavemente
+  loader.style.opacity = '0';
 
-      // Espera até que tudo da página carregue (imagens, CSS, fonts)
-      if (document.readyState === 'complete') {
-        hideLoader();
-      } else {
-        window.addEventListener('load', hideLoader);
-      }
-
-      // Timeout fallback (caso algum recurso trave)
-      setTimeout(hideLoader, 5000);
-    })();
+  // Remove do DOM após a transição
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 500); // 500ms = tempo do fade-out
+});
