@@ -22,12 +22,18 @@ animatedElements.forEach((el) => observer.observe(el));
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    menuToggle.classList.remove("active");
   });
-}
-;fil
+});
+
+
 
 
 

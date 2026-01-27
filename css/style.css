@@ -1,5 +1,3 @@
-
-
 /* ===============================
    DESIGN SYSTEM (VARIÁVEIS GLOBAIS)
    - Definido para cores, gradientes, tipografia base
@@ -127,7 +125,9 @@ p {
   color: var(--text-main);
 
   border-radius: 999px;
-  transition: color 0.3s, background 0.3s;
+  transition:
+    color 0.3s,
+    background 0.3s;
 }
 
 .nav a:hover {
@@ -239,8 +239,14 @@ p {
 
 /* Hero Animations */
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-eyebrow,
@@ -251,9 +257,15 @@ p {
   opacity: 0;
 }
 
-.hero h1 { animation-delay: 0.15s; }
-.hero p { animation-delay: 0.3s; }
-.hero .btn { animation-delay: 0.45s; }
+.hero h1 {
+  animation-delay: 0.15s;
+}
+.hero p {
+  animation-delay: 0.3s;
+}
+.hero .btn {
+  animation-delay: 0.45s;
+}
 
 .hero .btn-primary::after {
   content: "";
@@ -266,9 +278,17 @@ p {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 0.5; }
-  70% { transform: scale(1.15); opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Linhas de fundo do hero */
@@ -286,20 +306,22 @@ p {
   opacity: 0.15;
 }
 
-.lines span:nth-child(1) { left: 20%; }
-.lines span:nth-child(2) { left: 50%; }
-.lines span:nth-child(3) { left: 80%; }
+.lines span:nth-child(1) {
+  left: 20%;
+}
+.lines span:nth-child(2) {
+  left: 50%;
+}
+.lines span:nth-child(3) {
+  left: 80%;
+}
 
 /* ===============================
    PROVA SOCIAL – STATS
 ================================ */
 .stats {
   padding: 6rem 0;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(108, 242, 194, 0.04)
-  );
+  background: linear-gradient(180deg, transparent, rgba(108, 242, 194, 0.04));
 }
 
 .stats-grid {
@@ -379,7 +401,9 @@ p {
   background: var(--bg-light);
   border-radius: 24px;
   border: 1px solid var(--border);
-  transition: transform 0.4s ease, border-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
   overflow: hidden;
 }
 
@@ -387,11 +411,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    145deg,
-    transparent,
-    rgba(108, 242, 194, 0.12)
-  );
+  background: linear-gradient(145deg, transparent, rgba(108, 242, 194, 0.12));
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -453,7 +473,9 @@ p {
   border-radius: 24px;
   background: var(--bg-light);
   border: 1px solid var(--border);
-  transition: transform 0.4s ease, border-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
 }
 
 .package:hover {
@@ -528,7 +550,9 @@ p {
   background: var(--bg-light);
   border-radius: 20px;
   border: 1px solid var(--border);
-  transition: transform 0.3s, border-color 0.3s;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
 }
 
 .services article:hover {
@@ -541,7 +565,9 @@ p {
 .services article {
   opacity: 0;
   transform: translateY(40px) scale(0.96);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .services article.active {
@@ -550,9 +576,15 @@ p {
 }
 
 /* Cascata de animação */
-.services article:nth-child(1) { transition-delay: 0.1s; }
-.services article:nth-child(2) { transition-delay: 0.25s; }
-.services article:nth-child(3) { transition-delay: 0.4s; }
+.services article:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.services article:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.services article:nth-child(3) {
+  transition-delay: 0.4s;
+}
 
 /* ===============================
    PROCESSO
@@ -595,7 +627,9 @@ p {
   border-left: 3px solid var(--primary);
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 /* Bolinha da etapa */
@@ -609,7 +643,9 @@ p {
   background: var(--bg-dark);
   border: 2px solid var(--primary);
   border-radius: 50%;
-  transition: background 0.4s ease, transform 0.4s ease;
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
 }
 
 /* Etapa ativa */
@@ -624,9 +660,15 @@ p {
 }
 
 /* Cascata */
-.process-steps div:nth-child(1) { transition-delay: 0.1s; }
-.process-steps div:nth-child(2) { transition-delay: 0.25s; }
-.process-steps div:nth-child(3) { transition-delay: 0.4s; }
+.process-steps div:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.process-steps div:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.process-steps div:nth-child(3) {
+  transition-delay: 0.4s;
+}
 
 /* ===============================
    WHY + FORM
@@ -672,7 +714,11 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(108, 242, 194, 0.12), transparent 60%);
+  background: radial-gradient(
+    circle at top left,
+    rgba(108, 242, 194, 0.12),
+    transparent 60%
+  );
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -720,11 +766,14 @@ p {
   border: 1px solid var(--border);
   color: var(--text-main);
   font-size: 1.45rem;
-  transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 .form-group label {
- position: absolute;
+  position: absolute;
   top: 50%;
   left: 1.2rem;
   transform: translateY(-50%);
@@ -752,7 +801,6 @@ p {
   z-index: 3;
 }
 
-
 .form-group textarea {
   min-height: 120px;
   resize: none;
@@ -775,14 +823,21 @@ p {
   color: #0b0d12;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .contact-form button::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
   transform: translateX(-100%);
 }
 
@@ -796,7 +851,9 @@ p {
 }
 
 @keyframes shine {
-  to { transform: translateX(100%); }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .form-response {
@@ -813,6 +870,17 @@ p {
   text-align: center;
   font-size: 1.4rem;
   color: var(--text-muted);
+}
+
+/*Desktop menu*/
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 /* ===============================
@@ -846,8 +914,12 @@ p {
   .why-form {
     padding: 2.5rem 1.8rem;
   }
-  .why-form h3 { font-size: 1.9rem; }
-  .why-form p { font-size: 1.35rem; }
+  .why-form h3 {
+    font-size: 1.9rem;
+  }
+  .why-form p {
+    font-size: 1.35rem;
+  }
   .contact-form {
     max-width: 100%;
   }
@@ -865,31 +937,79 @@ p {
     font-size: 1.3rem;
   }
 
-  /* Menu Mobile */
-  .menu-toggle { display: flex; }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  } .menu-toggle span {
+    width: 26px;
+    height: 2px;
+    background: var(--text-main);
+    border-radius: 2px;
+  }
+
   .menu {
-    position: absolute;
+    display: flex;
+    position: fixed;
     top: 80px;
     left: 0;
     width: 100%;
-    background: rgba(11, 13, 18, 0.98);
-    backdrop-filter: blur(12px);
+    height: calc(100vh - 80px);
+    background: #0b0d12;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-    transform: translateY(-20px);
+    justify-content: center;
+    gap: 3rem;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s ease;
+    transform: translateY(-20px);
+    transition: all 0.35s ease;
+    z-index: 10000;
   }
+
   .menu.active {
-    transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+    transform: translateY(0);
   }
-  .nav ul li a { font-size: 1.8rem; }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* linhas */
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+/* animação quando ativo */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
 }
 
 /* ===============================
