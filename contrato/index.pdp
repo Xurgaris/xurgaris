@@ -1,0 +1,55 @@
+<?php
+$tokensValidos = require 'tokens.php';
+
+$token = $_GET['token'] ?? '';
+
+if (!in_array($token, $tokensValidos)) {
+  http_response_code(403);
+  echo "<h2 style='color:white;text-align:center;margin-top:40px'>Acesso restrito.</h2>";
+  exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Contrato de Serviço | Xurgaris</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Contrato de Prestação de Serviços</h1>
+
+  <div class="contrato">
+    <p>
+      Pelo presente instrumento, a Xurgaris presta serviços de desenvolvimento web,
+      conforme proposta aprovada. O contratante declara estar ciente dos prazos,
+      valores, forma de pagamento (Pix ou Mercado Pago) e escopo definido.
+    </p>
+
+    <p>
+      O não pagamento implica na suspensão do serviço. Alterações fora do escopo
+      serão cobradas à parte. O contrato entra em vigor após assinatura digital.
+    </p>
+  </div>
+
+  <input type="text" id="nome" placeholder="Nome completo">
+  <input type="text" id="cpf" placeholder="CPF">
+  <input type="email" id="email" placeholder="E-mail">
+
+  <canvas id="canvas"></canvas>
+  <button onclick="limpar()">Limpar assinatura</button>
+
+  <label class="aceite">
+    <input type="checkbox" id="aceite"> Li e concordo com os termos
+  </label>
+
+  <button class="btn" onclick="enviar()">Assinar contrato</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
