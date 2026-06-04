@@ -1,0 +1,61 @@
+/* ================================================
+   MAIN STYLESHEET - IMPORTA TODOS OS CSS
+   ================================================ */
+
+@import url('variables.css');
+@import url('reset.css');
+@import url('components.css');
+@import url('layout.css');
+@import url('sections.css');
+@import url('forms.css');
+
+/* ================================================
+   CUSTOM SCROLLBAR
+   ================================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Firefox */
+* {
+  scrollbar-color: var(--color-primary) var(--color-bg-dark);
+  scrollbar-width: thin;
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+  .header,
+  footer,
+  .floating-card,
+  .btn,
+  .contact-form {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+}

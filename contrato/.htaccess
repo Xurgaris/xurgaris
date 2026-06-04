@@ -1,5 +1,0 @@
-Options -Indexes
-
-<FilesMatch "\.(pdf|png)$">
-  Deny from all
-</FilesMatch>

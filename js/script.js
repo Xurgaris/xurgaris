@@ -1,52 +1,34 @@
-// ===============================
-// ANIMAÇÕES (IntersectionObserver)
-// ===============================
-const animatedElements = document.querySelectorAll(
-  "[data-animate], .services article, .process-steps div, .stats-grid div"
-);
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("active");
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('hide'), 900);
+  });
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        obs.unobserve(e.target);
+      }
     });
-  },
-  { threshold: 0.2 }
-);
-
-animatedElements.forEach((el) => observer.observe(el));
-
-// ===============================
-// MENU TOGGLE
-// ===============================
-const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
-
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
-  menu.classList.toggle("active");
-});
-document.querySelectorAll(".menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("active");
-    menuToggle.classList.remove("active");
+  }, { threshold: 0.1 });
+  reveals.forEach(el => obs.observe(el));
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
   });
-});
-
-
-
-
-
-const fields = document.querySelectorAll(".contact-form input, .contact-form textarea");
-
-fields.forEach((field) => {
-  // Atualiza classe filled ao digitar
-  field.addEventListener("input", () => {
-    if (field.value.trim() !== "") {
-      field.classList.add("filled");
-    } else {
-      field.classList.remove("filled");
-    }
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
   });
-});
-
