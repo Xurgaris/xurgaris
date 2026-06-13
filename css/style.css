@@ -2447,4 +2447,238 @@ body.no-scroll {
     font-size: 12px;
     padding: 14px 12px;
   }
+}/* =========================================================
+   REFORÇO DE RESPONSIVIDADE (CORREÇÕES DE CONFLITOS)
+   ========================================================= */
+
+/* Correção para o bug visual dos botões com animação no mobile */
+@media (max-width: 900px) {
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .hero-actions a {
+    width: min(100%, 320px) !important;
+    margin: 0 !important;
+    padding: 16px 20px !important;
+    text-align: center;
+    box-shadow: none !important; /* Remove reflexos pesados que quebram o layout mobile */
+    -webkit-box-reflect: none !important;
+  }
+}
+
+/* Ajuste na seção de serviços (Evita que o grid quebre o Flex do Carrossel) */
+@media (max-width: 768px) {
+  .services-track {
+    display: flex !important;
+    flex-direction: row !important; /* Mantém o carrossel horizontal */
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .services-section .service-card {
+    display: flex !important;
+    flex-direction: column !important; /* Empilha a imagem abaixo do texto no mobile */
+    flex: 0 0 85vw !important; /* Garante que o card não estique infinitamente */
+    max-width: 85vw !important;
+    height: auto !important;
+    border-radius: 16px;
+    margin-bottom: 10px;
+  }
+
+  .services-section .card-images {
+    width: 100% !important;
+    height: 200px !important;
+    order: 2; /* Garante a imagem na posição correta */
+  }
+
+  .services-section .card-text {
+    width: 100% !important;
+    padding: 20px !important;
+    order: 1;
+  }
+  
+  /* Fix para o grid institucional de 3 colunas original */
+  .cards {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+}
+
+/* Correção para os Cards Empilhados (Sticky Cards) da seção Hotels */
+@media (max-width: 767px) {
+  .c-hotels__list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .c-hotels__item {
+    position: relative !important; /* Remove o efeito sticky em telas pequenas para evitar bugs de rolagem */
+    top: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    grid-template-rows: none !important;
+  }
+
+  .c-hotels__item-figure {
+    width: 100% !important;
+    height: 220px !important;
+  }
+
+  .c-hotels__item-info {
+    width: 100% !important;
+    padding: 24px 20px !important;
+  }
+}
+
+/* Ajustes finos gerais para telas muito pequenas (Smartphones antigos/pequenos) */
+@media (max-width: 480px) {
+  .header {
+    padding: 0 16px !important;
+  }
+  
+  .logo {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .hero h1 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+
+  .contact__wrap {
+    gap: 32px !important;
+  }
+
+  .card {
+    padding: 16px !important;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  /* Faz os botões do formulário ocuparem largura total ordenados corretamente */
+  .card__foot {
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+/* ==========================================================================
+   ESTILIZAÇÃO DO MENU HAMBÚRGUER (INVISÍVEL NO DESKTOP)
+   ========================================================================== */
+
+.hamburger {
+  display: none; /* Garante que NUNCA aparece em telas de computador */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 20;
+  padding: 10px;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   COMPORTAMENTO APENAS PARA TELAS MENORES (MOBILE/TABLET)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 24px !important; /* Ajusta o espaçamento das bordas do celular */
+  }
+
+  /* 1. Torna o botão hambúrguer visível */
+  .hamburger {
+    display: flex;
+  }
+
+  /* 2. Captura a navegação e as redes sociais para criar a gaveta lateral */
+  .nav-container-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Esconde o menu para fora da tela (lado direito) */
+    width: 290px;
+    height: 100vh;
+    background: #050505; /* Cor escura padrão do seu site */
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    transition: right 0.4s cubic-bezier(0.1, 1, 0.1, 1);
+    z-index: 10;
+  }
+
+  /* Empilha os links um abaixo do outro no mobile */
+  .header .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-left: 0; /* Remove o recuo do desktop */
+  }
+
+  .header .btn-header {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Mantém as redes sociais organizadas no fundo do menu */
+  .header .ft-social {
+    display: flex !important;
+    gap: 24px;
+  }
+
+  .header .ft-social i {
+    font-size: 20px;
+  }
+
+  /* 3. Ativação controlada pelo seu JS existente (Garante a abertura) */
+  .header.is-open .nav-container-mobile {
+    right: 0; /* Traz o menu para dentro da tela */
+  }
+
+  /* 4. Animação das barras virando um botão de fechar "X" */
+  .header.is-open #menuToggle .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #9d4edd; /* Realce roxo */
+  }
+
+  .header.is-open #menuToggle .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header.is-open #menuToggle .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #9d4edd;
+  }
+
+  /* Trava a rolagem da página principal quando o menu está aberto */
+  body.no-scroll {
+    overflow: hidden;
+  }
 }

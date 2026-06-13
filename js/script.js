@@ -226,47 +226,51 @@
     window.addEventListener('resize', requestUpdate);
   });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("siteHeader") || document.querySelector(".header");
+  const menuToggle = document.getElementById("menuToggle");
 
-  const header = document.getElementById("siteHeader");
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.querySelectorAll(".nav a");
+  if (!header || !menuToggle) return;
 
-function closeMenu() {
-  header.classList.remove("is-open");
-  document.body.classList.remove("no-scroll");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Abrir menu");
-}
+  const navLinks = header.querySelectorAll(".nav a");
 
-function openMenu() {
-  header.classList.add("is-open");
-  document.body.classList.add("no-scroll");
-  menuToggle.setAttribute("aria-expanded", "true");
-  menuToggle.setAttribute("aria-label", "Fechar menu");
-}
-
-menuToggle.addEventListener("click", () => {
-  const isOpen = header.classList.contains("is-open");
-
-  if (isOpen) {
-    closeMenu();
-  } else {
-    openMenu();
+  function closeMenu() {
+    header.classList.remove("is-open");
+    document.body.classList.remove("no-scroll");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Abrir menu");
   }
-});
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeMenu();
+  function openMenu() {
+    header.classList.add("is-open");
+    document.body.classList.add("no-scroll");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Fechar menu");
   }
-});
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 900) {
-    closeMenu();
-  }
+  menuToggle.addEventListener("click", () => {
+    const isOpen = header.classList.contains("is-open");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) {
+      closeMenu();
+    }
+  });
 });
