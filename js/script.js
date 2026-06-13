@@ -274,3 +274,140 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+const contactForm = document.getElementById("contactForm");
+const contactPanels = document.querySelectorAll(".panel");
+const contactSteps = document.querySelectorAll(".step");
+const contactPrev = document.getElementById("contactPrev");
+const contactNext = document.getElementById("contactNext");
+const contactSubmit = document.getElementById("contactSubmit");
+const contactBar = document.getElementById("contactBar");
+const contactCount = document.getElementById("contactCount");
+const contactSuccess = document.getElementById("contactSuccess");
+const messageField = contactForm?.querySelector('textarea[name="message"]');
+
+const chips = document.querySelectorAll(".chip");
+const projectTypeInput = document.getElementById("projectTypeInput");
+
+let currentStep = 1;
+
+function updateContactStep() {
+  contactPanels.forEach((panel) => {
+    panel.classList.toggle("is-active", panel.dataset.panel == currentStep);
+  });
+
+  contactSteps.forEach((step) => {
+    step.classList.toggle("is-active", step.dataset.step == currentStep);
+    step.classList.toggle("is-done", Number(step.dataset.step) < currentStep);
+  });
+
+  contactPrev.disabled = currentStep === 1;
+  contactNext.hidden = currentStep === 3;
+  contactSubmit.hidden = currentStep !== 3;
+
+  contactBar.style.width = `${(currentStep / 3) * 100}%`;
+}
+
+function validateCurrentStep() {
+  let isValid = true;
+
+  const activePanel = document.querySelector(`.panel[data-panel="${currentStep}"]`);
+  const requiredFields = activePanel.querySelectorAll("[required]");
+
+  requiredFields.forEach((field) => {
+    const fieldWrap = field.closest(".field") || field.closest(".check");
+    const error = fieldWrap?.querySelector(".err");
+
+    if (!field.checkValidity()) {
+      isValid = false;
+
+      if (error) {
+        error.textContent = "Preencha este campo corretamente.";
+      }
+    } else {
+      if (error) {
+        error.textContent = "";
+      }
+    }
+  });
+
+  if (currentStep === 2 && !projectTypeInput.value) {
+    isValid = false;
+    const chipError = document.querySelector(".err--chips");
+
+    if (chipError) {
+      chipError.textContent = "Selecione um tipo de projeto.";
+    }
+  }
+
+  return isValid;
+}
+
+chips.forEach((chip) => {
+  chip.addEventListener("click", () => {
+    chips.forEach((item) => item.classList.remove("is-selected"));
+
+    chip.classList.add("is-selected");
+    projectTypeInput.value = chip.dataset.value;
+
+    const chipError = document.querySelector(".err--chips");
+    if (chipError) {
+      chipError.textContent = "";
+    }
+  });
+});
+
+contactNext?.addEventListener("click", () => {
+  if (!validateCurrentStep()) return;
+
+  if (currentStep < 3) {
+    currentStep++;
+    updateContactStep();
+  }
+});
+
+contactPrev?.addEventListener("click", () => {
+  if (currentStep > 1) {
+    currentStep--;
+    updateContactStep();
+  }
+});
+
+messageField?.addEventListener("input", () => {
+  contactCount.textContent = messageField.value.length;
+});
+
+contactForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!validateCurrentStep()) return;
+
+  const formData = new FormData(contactForm);
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(formData).toString(),
+    });
+
+    contactForm.reset();
+    chips.forEach((chip) => chip.classList.remove("is-selected"));
+    projectTypeInput.value = "";
+    contactCount.textContent = "0";
+
+    contactPanels.forEach((panel) => panel.hidden = true);
+    document.querySelector(".card__head").hidden = true;
+    document.querySelector(".card__foot").hidden = true;
+    contactSuccess.hidden = false;
+
+  } catch (error) {
+    alert("Não foi possível enviar sua mensagem. Tente novamente.");
+  }
+});
+
+updateContactStep();
