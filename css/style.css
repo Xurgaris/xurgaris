@@ -75,6 +75,7 @@ iframe {
 .nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 35px;
   margin-left: 80px;
   font-size: 12px;
@@ -99,7 +100,6 @@ iframe {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 18px;
 }
 
 .ft-social a {
@@ -273,87 +273,143 @@ iframe {
 }
 
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-secundary {
   position: relative;
   display: inline-block;
-  overflow: hidden;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  transition:
-    background 0.5s ease,
-    color 0.5s ease,
-    box-shadow 0.5s ease;
-}
-
-.btn-primary,
-.hero-actions a {
   padding: 25px 30px;
-}
-
-.btn-primary {
-  border-radius: 999px;
-  box-shadow: 0 0 32px rgba(255, 255, 255, 0.35);
-}
-
-.btn-secondary {
-  border-radius: 999px;
-}
-
-.hero-actions a {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  margin: 40px 0;
+  margin: 40px 50px 40px 0;
   color: #ffffff;
+  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 4px;
   transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: transparent;
 }
 
-.hero-actions a:hover {
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-secundary:hover {
   background: #131313;
   color: #ffffff;
   box-shadow:
     0 0 5px #bebebe,
     0 0 25px #585858,
     0 0 50px #313131,
-    0 0 120px #e2e2e2;
+    0 0 200px #e2e2e2;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.333));
 }
 
-.hero-actions a:nth-child(1) {
+.btn-primary {
   filter: hue-rotate(270deg);
 }
 
-.hero-actions a:nth-child(2) {
+.btn-secondary,
+.btn-secundary {
   filter: hue-rotate(110deg);
 }
 
-.hero-actions a span {
-  position: static;
-  display: inline-block;
-  margin-left: 12px;
-}
-
-.hero-actions a::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  pointer-events: none;
-  transition: border-color 0.3s ease, opacity 0.3s ease;
-}
-
-.hero-actions a:hover::before {
-  border-color: rgba(255, 255, 255, 0.85);
-}
-
 .btn-primary span,
-.btn-secondary span {
-  margin-left: 12px;
+.btn-secondary span,
+.btn-secundary span {
+  position: absolute;
+  display: block;
+}
+
+/* Linha superior */
+.btn-primary span:nth-child(1),
+.btn-secondary span:nth-child(1),
+.btn-secundary span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff);
+  animation: animate1 1s linear infinite;
+}
+
+/* Linha direita */
+.btn-primary span:nth-child(2),
+.btn-secondary span:nth-child(2),
+.btn-secundary span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ffffff);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+/* Linha inferior */
+.btn-primary span:nth-child(3),
+.btn-secondary span:nth-child(3),
+.btn-secundary span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #ffffff);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+/* Linha esquerda */
+.btn-primary span:nth-child(4),
+.btn-secondary span:nth-child(4),
+.btn-secundary span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ffffff);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }
 
 .outline-btn-hero {
@@ -516,7 +572,8 @@ iframe {
 
 .cards > .service-card {
   position: relative;
-  padding: 20px;
+  height: 500px;
+  padding: 0px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -609,7 +666,7 @@ iframe {
   left: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(226, 44, 44, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -626,7 +683,7 @@ iframe {
   align-items: center;
   gap: 18px;
   padding: 0 8%;
-  margin-bottom: 38px;
+  margin-bottom: 60px;
   color: #ffffff;
   text-transform: uppercase;
   font-size: 12px;
@@ -669,7 +726,8 @@ iframe {
 .services-track > .service-card {
   position: relative;
   flex: 0 0 min(760px, 84vw);
-  height: 260px;
+  height: 360px;
+  margin-top: 6px;
   display: grid;
   grid-template-columns: 42% 58%;
   scroll-snap-align: start;
