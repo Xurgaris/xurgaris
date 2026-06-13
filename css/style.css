@@ -176,6 +176,7 @@ iframe {
   display: flex;
   align-items: center;
   gap: 32px;
+  background: none;
 }
 
 /* =========================================================
@@ -1846,15 +1847,13 @@ iframe {
   }
 
   .header > .ft-social {
-    top: 332px;
+   
     justify-content: center;
     margin-top: 0;
     padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+  
     border-radius: 18px;
-    background: rgba(0, 0, 0, 0.94);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+  
   }
 
   .header.is-open > .nav,
@@ -1970,186 +1969,128 @@ iframe {
   }
 }
 
+/* =========================================================
+   CORREÇÃO DA "GAVETA" DOS CARDS DE SERVIÇOS NO MOBILE
+   Remove paredes laterais criadas pela div pai
+   ========================================================= */
+
 @media (max-width: 768px) {
-  .header {
-    padding: 0 18px;
-  }
-
-  .hero-tag {
-    font-size: 9px;
-    letter-spacing: 4px;
-  }
-
-  .outline-btn-hero {
-    width: min(100%, 280px);
-    text-align: center;
-  }
-
-  .trusted {
-    padding: 56px 20px 64px;
-  }
-
-  .trusted h2 {
-    font-size: 26px;
-  }
-
-  .logo-marquee {
-    margin-top: 36px;
-  }
-
-  .logo-track {
-    gap: 36px;
-  }
-
-  .offer {
-    padding: 72px 20px;
-  }
-
-  .section-title h2 {
-    font-size: 28px;
-  }
-
-  .section-title p {
-    font-size: 14px;
-  }
-
   .services-section {
+    width: 100%;
+    overflow: hidden;
     padding: 64px 0;
   }
 
-  .section-eyebrow,
-  .services-track-outer,
-  .services-nav {
-    padding-left: 20px;
-    padding-right: 20px;
+  .services-section .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
+  }
+
+  .services-track-outer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
   }
 
   .services-track {
+    width: 100%;
+    padding: 0 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
     gap: 18px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 18px;
+    box-sizing: border-box;
   }
 
   .services-track > .service-card {
-    flex: 0 0 88vw;
-    max-width: 88vw;
-    height: auto;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    border-radius: 16px;
-  }
-
-  .card-text {
-    width: 100%;
-    padding: 24px;
-    order: 1;
-  }
-
-  .card-title,
-  .card-text h2 {
-    font-size: 26px;
-  }
-
-  .card-desc,
-  .card-text p {
-    font-size: 14px;
-  }
-
-  .card-bottom {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .card-images {
-    width: 100%;
-    height: 190px;
-    min-height: 190px;
-    order: 2;
-  }
-
-  .card-images img {
-    width: 100%;
-    min-height: 190px;
-    object-fit: cover;
+    flex: 0 0 calc(100vw - 36px);
+    width: calc(100vw - 36px);
+    max-width: calc(100vw - 36px);
+    scroll-snap-align: start;
+    box-sizing: border-box;
   }
 
   .services-nav {
-    gap: 16px;
-    margin-top: 34px;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+}/* =========================================================
+   AJUSTE FINAL DOS CARDS DE SERVIÇOS NO MOBILE
+   Corrige texto encolhido e imagem cortada
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .services-track > .service-card {
+    flex: 0 0 calc(100vw - 36px);
+    width: calc(100vw - 36px);
+    max-width: calc(100vw - 36px);
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  .nav-arrows {
+  .services-track > .service-card .card-text {
     width: 100%;
-    justify-content: flex-end;
+    padding: 28px 22px 22px !important;
   }
 
-  .section-2,
-  .c-hotels {
-    width: min(100% - 32px, 1200px);
+  .services-track > .service-card .card-tag {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
   }
 
-  .c-hotels__title {
-    padding: 48px 16px 8px;
-    font-size: 38px;
+  .services-track > .service-card .card-title,
+  .services-track > .service-card .card-text h2 {
+    font-size: 24px !important;
+    line-height: 1.18 !important;
+    margin-bottom: 14px;
   }
 
-  .c-hotels__subtitle-main {
-    margin-bottom: 32px;
-    font-size: 15px;
+  .services-track > .service-card .card-desc,
+  .services-track > .service-card .card-text p {
+    font-size: 14.5px !important;
+    line-height: 1.75 !important;
+    max-width: 100% !important;
   }
 
-  .c-hotels__list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .c-hotels__item {
-    position: relative;
-    top: auto;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    grid-template-rows: none;
-  }
-
-  .c-hotels__item:not(:last-child) {
-    animation: none;
-  }
-
-  .c-hotels__item-figure {
-    width: 100%;
-    height: 220px;
-  }
-
-  .c-hotels__item-info {
-    width: 100%;
-    padding: 30px 22px;
-  }
-
-  .c-hotels__item-title {
-    font-size: 30px;
-  }
-
-  .c-hotels__item-excerpt {
-    font-size: 15px;
-  }
-
-  .contact {
-    padding: 72px 20px;
-  }
-
-  .steps {
+  .services-track > .service-card .card-bottom {
+    margin-top: 20px;
     gap: 12px;
   }
 
-  .footer-container {
-    padding: 64px 20px 44px;
+  .services-track > .service-card .card-cta {
+    font-size: 12px;
   }
 
-  .footer-proof,
-  .footer-bottom {
-    padding-left: 20px;
-    padding-right: 20px;
+  .services-track > .service-card .card-index {
+    font-size: 11px;
+  }
+
+  .services-track > .service-card .card-images {
+    width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 18px 22px;
+    background: transparent;
+    overflow: visible !important;
+  }
+
+  .services-track > .service-card .card-images img {
+    width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block;
+    border-radius: 14px;
   }
 }
 
