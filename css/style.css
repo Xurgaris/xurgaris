@@ -147,7 +147,7 @@ iframe {
   height: 2px;
   display: block;
   border-radius: 999px;
-  background: #ffffff;
+  background: #fff;
   transition:
     transform 0.3s ease,
     opacity 0.3s ease,
@@ -174,7 +174,7 @@ iframe {
 /* Suporte para HTML que usa uma gaveta lateral com .nav-container-mobile */
 .nav-container-mobile {
   display: flex;
-  align-items: center;
+  align-items: center; 
   gap: 32px;
   background: none;
 }
@@ -1876,10 +1876,9 @@ iframe {
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
-    padding: 40px;
+    padding-top: 90px;
     transition: right 0.4s cubic-bezier(0.1, 1, 0.1, 1);
   }
 
@@ -1889,9 +1888,11 @@ iframe {
 
   .nav-container-mobile .nav {
     flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    margin-left: 0;
+    align-items:flex-end;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 70px;
     text-align: center;
   }
 
@@ -1900,7 +1901,9 @@ iframe {
     font-size: 18px;
     text-align: center;
     width: 100%;
-  }
+    
+    display: flex;
+    }
 
   .nav-container-mobile .ft-social {
     display: flex;
